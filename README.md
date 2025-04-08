@@ -5,10 +5,10 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* kauã rodrigues da silva
+* Kauã rodrigues da silva
 * Miguel teixeira bicalho
-* athur
-* henrique
+* Arthur Vital 
+* Henrique Araujo
 * Pedro Medina
 * Lorrainny
 
