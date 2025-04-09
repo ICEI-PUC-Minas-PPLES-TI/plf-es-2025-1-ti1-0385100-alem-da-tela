@@ -2,14 +2,15 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** Além da tela
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-alem-da-tela.git
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
-
+  * [Henrique Araujo](https://github.com/redx006) 
+  * [Miguel Teixeira ](https://github.com/texascountry) 
+  * [Arthur Vital](https://github.com/arthurrvital)
+  * [Pedro Medina]()
+  * [Kaua Rodrigues](https://github.com/002002002) 
 A documentação do projeto é estruturada da seguinte forma:
 
 1. Introdução
@@ -24,94 +25,57 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+A saúde mental dos jovens tem sido um tema cada vez mais preocupante, com o aumento significativo de casos de ansiedade, depressão e outros transtornos emocionais. Muitos deles enfrentam essas dificuldades sem ter acesso fácil a apoio psicológico, seja por falta de recursos, informações ou medo de julgamento. Pensando nisso, propomos a criação de um site que ofereça apoio emocional, conteúdos educativos e recursos interativos voltados para o bem-estar mental. Como a maioria dos jovens está conectada à internet diariamente, a tecnologia se apresenta como uma ferramenta acessível e eficaz para levar acolhimento e orientação a esse público, especialmente jovens entre 13 e 25 anos que buscam ajuda ou desejam entender melhor sua saúde emocional.
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Esta aplicação será desenvolvida como parte de um projeto acadêmico interdisciplinar, voltado à criação de soluções digitais que gerem impacto social. O foco está no desenvolvimento de um site que ofereça apoio à saúde mental de jovens entre 13 e 25 anos, promovendo bem-estar emocional através de conteúdos educativos, ferramentas interativas e acesso facilitado a informações confiáveis.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+A aplicação será hospedada em ambiente web, acessível por navegadores modernos, e desenvolvida com tecnologias padrão como HTML, CSS e JavaScript, podendo utilizar frameworks front-end para melhor experiência do usuário. Além disso, existe a intenção de integrar APIs externas, como a NewsAPI, para fornecer conteúdos informativos atualizados relacionados ao tema.
+
+O projeto não está vinculado a nenhuma empresa específica neste momento, mas poderá futuramente servir como base para parcerias com instituições de ensino, organizações sociais ou iniciativas de saúde pública voltadas à juventude.
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O objetivo geral deste trabalho é desenvolver um software na forma de um site, com foco em auxiliar jovens a lidarem com questões relacionadas à saúde mental. A aplicação buscará oferecer apoio emocional, informações confiáveis e recursos interativos que possam contribuir para o bem-estar psicológico desse público.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos específicos:
 
+Investigar e organizar conteúdos educativos confiáveis sobre saúde mental, com linguagem acessível, a fim de promover a conscientização e o conhecimento entre os jovens usuários da plataforma.
+
+Implementar funcionalidades que incentivem o autocuidado e a expressão emocional, como diário pessoal, exercícios de respiração e integração com APIs que ofereçam notícias ou informações atualizadas sobre o tema.
+
+>
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+A motivação para este projeto surgiu da crescente preocupação com a saúde mental dos jovens, que enfrentam ansiedade e depressão, muitas vezes sem acesso a apoio profissional. A tecnologia, nesse cenário, é uma aliada poderosa por ser acessível e familiar ao público jovem.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Os objetivos específicos foram escolhidos para unir informação confiável e suporte emocional prático, por meio de conteúdos educativos e ferramentas como diário emocional e exercícios de respiração. A proposta é oferecer uma solução simples, acessível e acolhedora, que ajude jovens a cuidarem melhor de sua saúde mental.
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+A aplicação é voltada para jovens, que enfrentam desafios emocionais ou buscam cuidar da saúde mental. Em geral, esse público tem familiaridade com tecnologia e utiliza frequentemente celulares, redes sociais e sites.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Dois perfis se destacam:
+
+Jovens que buscam apoio emocional e formas de desabafar;
+
+Jovens que querem aprender mais sobre saúde mental.
+
+O site será acessível, intuitivo e não exigirá conhecimentos técnicos, oferecendo uma experiência acolhedora para todos.
 
 # Product Discovery
 
 ## Etapa de Entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
->
-> * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-> * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
-> * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+![Texto alternativo](images/Highlight%20e%20Pesquisa.png)
+![Texto alternativo](images/Mapa%20e%20CSD.png)
 
 ## Etapa de Definição
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+![Texto alternativo](images/PERSONA.png)
 
 # Product Design
 
@@ -121,31 +85,14 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
+| EU COMO...`Lucas` | QUERO/PRECISO ...`Ferramenta`        | PARA ...`MOTIVO/VALOR`               |
 | --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| Usuário do sistema   | Informações sobre saúde mental     | Local/Site para encontrar um ponto seguro|
+| Administrador         | Conscientizar sobre o tema        | Aliviar as Angustias/Desabafar |
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
-
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
-
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+![Texto alternativo](images/PROPOSTA%20DE%20VALOR.png)
 
 ## Requisitos
 
@@ -155,32 +102,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 | Permitir que o usuário tenha um lugar seguro para cuidar da saude mental | ALTA       |
+| RF-002 | Conversar com profissionais ou conhencer novas pessoas | ALTA    |
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
+| RNF-001 | O sistema deve ser responsivo para rodar em todos os dispositivos | MÉDIA     |
+| RNF-002 | Deve processar requisições do usuário em poucos segundos para ter um contato maior com os atendentes | MÉDIA     |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
+> 
 ## Projeto de Interface
 
 Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
@@ -189,40 +121,11 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
-
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
-
-Descrição para a tela XPTO
-
-![Exemplo de wireframe](images/exemplo-wireframe.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+![Exemplo de wireframe](images/WIREFRAME%201.png)
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
-
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
->
-> **Orientações**:
->
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+![Exemplo de wireframe](images/USERFLOW%20V2.png)
 
 ### Protótipo Interativo
 

@@ -8,71 +8,152 @@
     <script src="./assets/js/login.js"></script>
   </head>
   <body>
-    <header>
-      <div class="banner">
-        <img src="./assets/images/banner_ti.png" alt="" />
+      <header>
+          <nav>
+              <div class="logo">
+                  <span class="heart">♥</span>
+                  <span>Além da Tela</span>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="#inicio">Início</a></li>
+                  <li><a href="#recursos">Recursos</a></li>
+                  <li><a href="#comunidade">Comunidade</a></li>
+                  <li><a href="#ajuda">Buscar Ajuda</a></li>
+              </ul>
+              <button class="menu-toggle" aria-label="Menu">☰</button>
+          </nav>
+      </header>
+  
+      <main>
+          <section id="inicio" class="hero">
+              <h1>Bem-vindo ao Além da Tela</h1>
+              <p>Um espaço seguro para cuidar da sua saúde mental, conectar-se com outros e encontrar apoio quando você mais precisa.</p>
+              <button class="cta-button" onclick="showModal('ajuda-modal')">Preciso de Ajuda Agora</button>
+          </section>
+  
+          <section id="recursos" class="cards">
+              <div class="card" onclick="showContent('recursos')">
+                  <div class="icon">📚</div>
+                  <h2>Recursos de Autocuidado</h2>
+                  <p>Acesse guias, artigos e ferramentas práticas para cuidar da sua saúde mental.</p>
+                  <button class="card-button">Explorar Recursos</button>
+              </div>
+  
+              <div class="card" onclick="showContent('comunidade')">
+                  <div class="icon">💭</div>
+                  <h2>Comunidade de Apoio</h2>
+                  <p>Conecte-se com pessoas que compartilham experiências semelhantes.</p>
+                  <button class="card-button">Participar</button>
+              </div>
+  
+              <div class="card" onclick="showContent('profissional')">
+                  <div class="icon">📞</div>
+                  <h2>Ajuda Profissional</h2>
+                  <p>Encontre orientação e acesso a profissionais qualificados.</p>
+                  <button class="card-button">Buscar Profissional</button>
+              </div>
+          </section>
+  
+          <section id="conteudo" class="content-section hidden">
+              <div id="recursos-content" class="content-area hidden">
+                  <h2>Recursos de Autocuidado</h2>
+                  <div class="resource-grid">
+                      <article class="resource-card">
+                          <h3>Meditação Guiada</h3>
+                          <p>Aprenda técnicas simples de meditação para o dia a dia.</p>
+                          <a href="#" class="resource-link">Começar Agora</a>
+                      </article>
+                      <article class="resource-card">
+                          <h3>Diário de Gratidão</h3>
+                          <p>Mantenha um registro diário de momentos positivos.</p>
+                          <a href="#" class="resource-link">Criar Diário</a>
+                      </article>
+                      <article class="resource-card">
+                          <h3>Exercícios de Respiração</h3>
+                          <p>Técnicas de respiração para reduzir ansiedade.</p>
+                          <a href="#" class="resource-link">Praticar</a>
+                      </article>
+                  </div>
+              </div>
+  
+              <div id="comunidade-content" class="content-area hidden">
+                  <h2>Comunidade de Apoio</h2>
+                  <div class="community-section">
+                      <div class="group-list">
+                          <div class="group-card">
+                              <h3>Grupo de Ansiedade</h3>
+                              <p>Compartilhe experiências e aprenda estratégias.</p>
+                              <button class="join-button">Participar</button>
+                          </div>
+                          <div class="group-card">
+                              <h3>Depressão e Recuperação</h3>
+                              <p>Encontre apoio em sua jornada.</p>
+                              <button class="join-button">Participar</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div id="profissional-content" class="content-area hidden">
+                  <h2>Ajuda Profissional</h2>
+                  <div class="professional-grid">
+                      <div class="professional-card">
+                          <h3>Psicólogos Online</h3>
+                          <p>Consultas por videoconferência.</p>
+                          <button class="schedule-button">Agendar</button>
+                      </div>
+                      <div class="professional-card">
+                          <h3>Terapia em Grupo</h3>
+                          <p>Sessões terapêuticas em grupo.</p>
+                          <button class="schedule-button">Conhecer</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </main>
+  
+      <div id="ajuda-modal" class="modal hidden">
+          <div class="modal-content">
+              <span class="close-button" onclick="closeModal('ajuda-modal')">&times;</span>
+              <h2>Precisa de Ajuda?</h2>
+              <div class="emergency-contacts">
+                  <div class="contact-item">
+                      <h3>CVV - Centro de Valorização da Vida</h3>
+                      <p>Ligue 188 (24 horas)</p>
+                      <a href="https://www.cvv.org.br" target="_blank" class="emergency-button">Acessar Chat Online</a>
+                  </div>
+                  <div class="contact-item">
+                      <h3>SAMU</h3>
+                      <p>Ligue 192 (Emergências)</p>
+                  </div>
+              </div>
+              <div class="help-options">
+                  <button onclick="showContent('profissional')" class="help-button">Encontrar Psicólogo</button>
+                  <button onclick="showContent('recursos')" class="help-button">Recursos de Autoajuda</button>
+              </div>
+          </div>
       </div>
-      <div class="barra-info">
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre nós</a></li>
-          </ul>
-        </nav>
-        <div class="dados-usuario">
-          <span id="userInfo"></span>
-        </div>
-      </div>
-    </header>
-    <main>
-        <h3>Boas vindas</h3>
-        <p>Sejam bem-vindos à home-page do projeto de TI 1 - Trabalho
-        Interdisciplinar</p>
-        <p>Esse conteúdo que você está lendo foi criado para exemplificar como
-        criar o seu site integrado com o ambiente de login e o back end que
-        utiliza o JSON Server.</p>
-        <p>Ao criar o seu site, você deve adaptar esse código para sua neessidade ou começar do zero, excluindo todo esse conteúdo.
-        </p>
-
-        <h3>Arquivos do site (Front End)</h3>
-        <p>Para montar seu site, edite os arquivos existentes e crie novos arquivos na pasta <code>public</code> que mantem todos os arquivos da parte de Front End do site, a interface que é vista pelo usuário no navegador.</p>
-
-        <p>Nesta pasta <code>public</code>, sugerimos que você organize os arquivos do seu site da seguinte maneira:</p>
-        <ul>
-            <li><strong>Pasta <code>assets</code></strong>: os arquivos de formatação (CSS), os scripts (JS), as imagens utilizadas no site (JPG, PNG, GIF, SVG, etc), fontes (TTF) e outros arquivos gerais utilizados por todo o site.</li>
-            <li><strong>Pasta <code>modulos</code></strong>: os arquivos utilizados na implementação das funcionalidades do site. Separe uma sub-pasta para cada novo módulo ou funcionalidade. Pode também ser utilizado para dividir o trabalho de cada membro do grupo.</li>
-            <li><strong>Arquivo <code>index.html</code></strong>: arquivo que representa a "home page" do site.</li>
-        </ul>
-
-        <h3>Módulo de Login</h3>
-        <p>O módulo de login de usuário traz uma funcionalidade completa de registro de usuários e validação de login e senha.</p>
-        <h4>Integração do site com módulo de Login</h4>
-        <p>Para utilizar o módulo de login, basta incluir o script na sua página colocando a seguinte tag no HEAD</p>
-        <pre>&lt;script src="./assets/js/login.js"&gt&lt;script&gt;</pre>
-        <p>Ao incluir o script de login na sua página, caso o usuário ainda não tenha efetuado login, ao acessar a home-page do site, o navegador será direcionado para o formulário de <strong>Identificação de Usuário</strong>. Se o usuário informar corretamente o login e a senha, o navegador será direcionado para a Home-Page.</p>
-        <h4>Sessão do usuário logado</h4>
-        <p>Assim que o usuário se identifica e acessa a parte privada do site, o módulo de login cria uma chave do sessionStorage do navegador com o título <strong>usuarioCorrente</strong> e cujo conteúdo é um objeto com os atributos: id, nome, login, senha e email. </p>
-        <h4>Base de dados de usuários</h4>
-        <p>Inicialmente o módulo de login é configurado com dois usuários: </p>
-        <ul>
-            <li>admin - Senha: 123</li>
-            <li>user - Senha: 123</li>
-        </ul>
-
-        <h3>Servidor Web e API baseada no JSON Server (Back end)</h3>
-        <p>O ambiente de trabalho disponibilizado para suportar o Trabalho Interdisciplinar 1 é baseado no Node.js. A aplicação de back end utiliza o módulo JSON Server para criar um Servidor Web que prove duas estruturas separadas:
-        <ul>
-            <li><strong>Arquivos estáticos (Pasta <code>public</code>)</strong>: da acesso aos arquivos utilizados no front end (HTML, CSS e JavaScript).</li>
-            <li><strong>API RESTful (pasta <code>db</code>)</strong>: uma interface para acesso aos dados definidos no arquivo db.json.</li>
-        </ul></p>
-
-        <h4>Arquitetura do site</h4>
-        <p>A imagem que se segue apresenta a arquitetura desse ambiente, mostrando as duas refletindo as pastas desse ambiente.</p>
-        <p><img class="img-fluid d-block w-75 m-auto" src="./assets/images/servidor.png" alt=""></p>
-
-        <h4>Arquivo db.json</h4>
-        <p>O arquivo JSON utilizado para definição das estruturas dos dados providos pela aplicação é localizado na pasta db e tem um formato como o mostrado no exemplo da figura a seguir. Esse arquivo define uma estrutura hipotética de contatos que descreve itens com os seguintes atributos: <code>id</code>, <code>nome</code> e <code>cidade</code>. para o JSON Server, é fundamental que toda estrutura tenha um atributo de identificador de nome <code>id</code>.</p>
-        <p><img class="img-fluid d-block w-50 m-auto" src="./assets/images/arquivo_json.png" alt=""></p>
-    </main>
+  
+      <footer>
+          <div class="footer-content">
+              <div class="footer-section">
+                  <h3>Sobre Nós</h3>
+                  <p>O Além da Tela é uma plataforma dedicada ao bem-estar mental.</p>
+              </div>
+              <div class="footer-section">
+                  <h3>Contato</h3>
+                  <p>Email: contato@alemdatela.com.br</p>
+              </div>
+              <div class="footer-section">
+                  <h3>Emergência</h3>
+                  <p>CVV: 188</p>
+                  <p>SAMU: 192</p>
+              </div>
+          </div>
+          <p class="copyright">© 2024 Além da Tela. Todos os direitos reservados.</p>
+          <p class="emergency">Em caso de emergência, ligue 188 (CVV) ou procure ajuda médica imediata.</p>
+      </footer>
+  
+      <script src="main.js"></script>
   </body>
-</html>
+  </html>
