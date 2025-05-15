@@ -1,0 +1,9 @@
+{
+    "files.watcherExclude": {
+        "**/Icon?": true
+    },
+    "liveServer.settings.port": 5501,
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "master"
+    ]
+}
