@@ -52,3 +52,69 @@ textarea{
     align-items: center;
     margin-top: 40px;
 }
+button{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 2, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(255, 2, 255);
+}
+button:hover{
+    
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 2, );
+}
+.botaoEnviar{
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.comentarios{
+    border: none;
+    position: relative;
+    top: 25%;
+}
+.caixaMensagem2,
+#botaoEnviar2 {
+  display: none;
+}
+
+.caixaMensagem2.show,
+#botaoEnviar2.show {
+  display: block;
+  
+}
+.caixaMensagem2.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+#respostas {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #111;
+  border-radius: 10px;
+  color: #ff02ff;
+  width: 60%;
+  font-family: Arial, sans-serif;
+}
+.caixaMensagem2,
+#botaoEnviar2,
+#respostas {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
