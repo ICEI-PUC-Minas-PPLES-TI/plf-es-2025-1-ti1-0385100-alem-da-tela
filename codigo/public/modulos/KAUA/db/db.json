@@ -1,25 +1,50 @@
 {
-  "usuarios": [
+  "recursos": [
     {
-      "id": 1,
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": "meditacao",
+      "titulo": "Meditação Guiada",
+      "descricao": "Aprenda técnicas simples de meditação para o dia a dia.",
+      "imagem": "meditacao.jpg"
     },
     {
-      "id": 2,
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "id": "gratidao",
+      "titulo": "Diário de Gratidão",
+      "descricao": "Mantenha um registro diário de momentos positivos.",
+      "imagem": "gratidao.jpg"
     },
     {
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "id": "respiracao",
+      "titulo": "Exercícios de Respiração",
+      "descricao": "Técnicas de respiração para reduzir ansiedade.",
+      "imagem": "respiracao.jpg"
+    }
+  ],
+  "comunidades": [
+    {
+      "id": "grupo-ansiedade",
+      "titulo": "Grupo de Ansiedade",
+      "descricao": "Compartilhe experiências e aprenda estratégias.",
+      "imagem": "grupo-ansiedade.jpg"
+    },
+    {
+      "id": "depressao",
+      "titulo": "Depressão e Recuperação",
+      "descricao": "Encontre apoio em sua jornada.",
+      "imagem": "depressao.jpg"
+    }
+  ],
+  "profissionais": [
+    {
+      "id": "psicologo-online",
+      "titulo": "Psicólogos Online",
+      "descricao": "Consultas por videoconferência.",
+      "imagem": "psicologo.jpg"
+    },
+    {
+      "id": "terapia-grupo",
+      "titulo": "Terapia em Grupo",
+      "descricao": "Sessões terapêuticas em grupo.",
+      "imagem": "terapia.jpg"
     }
   ]
 }

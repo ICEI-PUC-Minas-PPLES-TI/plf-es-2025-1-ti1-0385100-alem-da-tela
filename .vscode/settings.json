@@ -5,5 +5,11 @@
     "liveServer.settings.port": 5501,
     "githubPullRequests.ignoredPullRequestBranches": [
         "master"
-    ]
+    ],
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
 }

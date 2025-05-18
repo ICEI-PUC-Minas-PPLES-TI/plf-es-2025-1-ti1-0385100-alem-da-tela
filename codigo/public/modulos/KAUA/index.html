@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Além da tela</title>
-    <link rel="stylesheet" href="public\assets\css\style.css" />
-    <script src="./assets/js/login.js"></script>
+    <link rel="stylesheet" href="public/assets/css/style.css" />
+    
   </head>
   <body>
       <!--<header>
@@ -32,7 +32,7 @@
           </section>
   -->
         
-          <section id="recursos" class="cards">
+          <!--<section id="recursos" class="cards">
               <div class="card" onclick="showContent('recursos')">
                   <div class="icon">📚</div>
                   <h2>Recursos de Autocuidado</h2>
@@ -60,7 +60,7 @@
   
           <section id="conteudo" class="content-section hidden">
               <div id="recursos-content" class="content-area hidden">
-                  <h2>Recursos de Autocuidado</h2>
+                  <h2>📚Recursos de Autocuidado</h2>
                   <div class="resource-grid">
                       <article class="resource-card">
                           <h3>Meditação Guiada</h3>
@@ -81,7 +81,7 @@
               </div>
   
               <div id="comunidade-content" class="content-area hidden">
-                  <h2>Comunidade de Apoio</h2>
+                  <h2>💭Comunidade de Apoio</h2>
                   <div class="community-section">
                       <div class="group-list">
                           <div class="group-card">
@@ -99,7 +99,7 @@
               </div>
   
               <div id="profissional-content" class="content-area hidden">
-                  <h2>Ajuda Profissional</h2>
+                  <h2>📞Ajuda Profissional</h2>
                   <div class="professional-grid">
                       <div class="professional-card">
                           <h3>Psicólogos Online</h3>
@@ -113,10 +113,65 @@
                       </div>
                   </div>
               </div>
-          </section>
+          </section>-->
+          
+<section id="conteudo" class="content-section hidden">
+
+  <!-- Recursos de Autocuidado -->
+  <div id="recursos-content" class="content-area hidden">
+    <h2>Recursos de Autocuidado</h2>
+    <div id="resource-container" class="resource-grid">
+      <!-- Os cards virão via JavaScript -->
+    </div>
+  </div>
+
+  <!-- Comunidade de Apoio -->
+  <div id="comunidade-content" class="content-area hidden">
+    <h2>Comunidade de Apoio</h2>
+    <div id="comunidade-container" class="group-list">
+      <!-- Os grupos virão via JavaScript -->
+    </div>
+  </div>
+
+  <!-- Ajuda Profissional -->
+  <div id="profissional-content" class="content-area hidden">
+    <h2>Ajuda Profissional</h2>
+    <div id="profissional-container" class="professional-grid">
+      <!-- Os profissionais virão via JavaScript -->
+    </div>
+  </div>
+
+</section>
+
+<!-- Modal de Ajuda -->
+<div id="ajuda-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal('ajuda-modal')">&times;</span>
+    <h2>Precisa de Ajuda?</h2>
+
+    <div class="emergency-contacts">
+      <div class="contact-item">
+        <h3>CVV - Centro de Valorização da Vida</h3>
+        <p>Ligue 188 (24 horas)</p>
+        <a href="https://www.cvv.org.br" target="_blank" class="emergency-button">Acessar Chat Online</a>
+      </div>
+      <div class="contact-item">
+        <h3>SAMU</h3>
+        <p>Ligue 192 (Emergências)</p>
+      </div>
+    </div>
+
+    <div class="help-options">
+      <button onclick="showContent('profissional')" class="help-button">Encontrar Psicólogo</button>
+      <button onclick="showContent('recursos')" class="help-button">Recursos de Autoajuda</button>
+    </div>
+  </div>
+</div>
+
+
       </main>
   
-      <div id="ajuda-modal" class="modal hidden">
+      <!--<div id="ajuda-modal" class="modal hidden">
           <div class="modal-content">
               <span class="close-button" onclick="closeModal('ajuda-modal')">&times;</span>
               <h2>Precisa de Ajuda?</h2>
@@ -136,7 +191,7 @@
                   <button onclick="showContent('recursos')" class="help-button">Recursos de Autoajuda</button>
               </div>
           </div>
-      </div>
+      </div>-->
   
       <!--<footer>
           <div class="footer-content">
@@ -158,6 +213,6 @@
           <p class="emergency">Em caso de emergência, ligue 188 (CVV) ou procure ajuda médica imediata.</p>
       </footer>-->
   
-      <script src="app.js"></script>
+      <script src="public/assets/js/app.js"></script>
   </body>
   </html>
