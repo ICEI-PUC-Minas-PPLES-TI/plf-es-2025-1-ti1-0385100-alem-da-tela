@@ -136,6 +136,13 @@ main {
     margin: 0 auto;
 }
 
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
 .card {
     background-color: var(--card-bg);
     padding: 2rem;
@@ -364,3 +371,4 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
