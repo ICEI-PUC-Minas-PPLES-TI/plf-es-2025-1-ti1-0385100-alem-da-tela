@@ -1,39 +1,76 @@
-// URL da API json-server
-const API_URL = 'http://localhost:3000/recursos';
-
-// Função para criar um card HTML com os dados do recurso
-function criarCardRecurso(recurso) {
+// Função genérica para criar um card HTML com os dados
+function criarCard(item) {
   return `
     <article class="resource-card">
-      <h3>${recurso.titulo}</h3>
-      <p>${recurso.descricao}</p>
-      <img src="${recurso.imagem}" alt="${recurso.titulo}" />
-      <a href="#" class="resource-link">Começar Agora</a>
+      <h3>${item.titulo}</h3>
+      <p>${item.descricao}</p>
+      ${item.imagem ? `<img src="${item.imagem}" alt="${item.titulo}" />` : ''}
+      <a href="${item.link || '#'}" class="resource-link">${item.acao || 'Começar Agora'}</a>
     </article>
   `;
 }
 
-// Função para buscar os dados e montar a seção
+// Função para carregar recursos
 async function carregarRecursos() {
   try {
-    const resposta = await fetch(API_URL);
+    const resposta = await fetch('http://localhost:3000/recursos');
     const recursos = await resposta.json();
 
-    const container = document.querySelector('#recursos-content .resource-grid');
-    container.innerHTML = ''; // limpa antes de preencher
+    const container = document.getElementById('resource-container');
+    container.innerHTML = '';
 
     recursos.forEach(recurso => {
-      container.innerHTML += criarCardRecurso(recurso);
+      container.innerHTML += criarCard(recurso);
     });
 
-    // Remove a classe 'hidden' para mostrar a seção
-    document.getElementById('recursos-content').classList.remove('hidden');
+document.getElementById('recursos-content').classList.remove('hidden');
+
   } catch (error) {
     console.error('Erro ao carregar recursos:', error);
   }
 }
 
-// Quando a página carregar, chama a função
-window.onload = () => {
+// Função para carregar comunidades
+async function carregarComunidades() {
+  try {
+    const resposta = await fetch('http://localhost:3000/comunidades');
+    const comunidades = await resposta.json();
+
+    const container = document.getElementById('comunidade-container');
+    container.innerHTML = '';
+
+    comunidades.forEach(item => {
+      container.innerHTML += criarCard(item);
+    });
+
+    document.getElementById('comunidades-content').classList.remove('hidden');
+  } catch (error) {
+    console.error('Erro ao carregar comunidades:', error);
+  }
+}
+
+// Função para carregar profissionais
+async function carregarProfissionais() {
+  try {
+    const resposta = await fetch('http://localhost:3000/profissionais');
+    const profissionais = await resposta.json();
+
+   const container = document.getElementById('profissional-container');
+    container.innerHTML = '';
+
+    profissionais.forEach(item => {
+      container.innerHTML += criarCard(item);
+    });
+
+   document.getElementById('profissional-content').classList.remove('hidden');
+  } catch (error) {
+    console.error('Erro ao carregar profissionais:', error);
+  }
+}
+
+// Quando a página carregar, chama as funções para carregar todas as seções
+window.addEventListener('DOMContentLoaded', () => {
   carregarRecursos();
-};
+  carregarComunidades();
+  carregarProfissionais();
+});
