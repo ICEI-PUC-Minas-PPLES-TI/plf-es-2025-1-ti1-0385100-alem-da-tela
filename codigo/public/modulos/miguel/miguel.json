@@ -2,4 +2,27 @@
   "comentarios": [
     
   ]
+
+  "frasesMotivacionais": [
+    {
+      "emocao": "calma",
+      "frase": "Continue nesse caminho de serenidade — a calma é uma força poderosa."
+    },
+    {
+      "emocao": "ansiosa",
+      "frase": "Respire fundo. Você está no controle, mesmo que agora pareça que não está."
+    },
+    {
+      "emocao": "aflita",
+      "frase": "Mesmo nas tempestades mais fortes, há sempre um momento em que o sol volta a brilhar."
+    },
+    {
+      "emocao": "nervosa",
+      "frase": "Canalize essa energia. Grandes mudanças nascem do desconforto."
+    },
+    {
+      "emocao": "triste",
+      "frase": "Você não está sozinho. A tristeza também é parte do crescimento — ela passa."
+    }
+  ]
 }
