@@ -37,3 +37,27 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+button:hover{
+    background-color: #0056b3;
+}
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
+    border-radius: 20px;
+}
+.cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 20px;
+}
+.esqueci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 20px;
+}
