@@ -45,6 +45,7 @@ btnEnviar.addEventListener("click", () => {
         document.getElementById("registro").value = "";
         document.querySelectorAll('input[name="privado"]').forEach((el) => (el.checked = false));
         document.querySelectorAll('input[name="profissional"]').forEach((el) => (el.checked = false));
+        window.location.href = "tela_gerada.html";
       } else {
         alert("Erro ao enviar registro.");
       }

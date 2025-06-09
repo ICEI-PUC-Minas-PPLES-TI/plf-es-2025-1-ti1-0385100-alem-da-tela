@@ -141,13 +141,61 @@ footer {
     position: fixed; /* Fixado na viewport */
     bottom: 0;       /* Ancorado no rodapé */
     width: calc(100% - 30vh); /* Reduz a largura considerando a aba */
-    left: 35vh;      /* Move o footer para a direita da aba */
+    left: 45vh;      /* Move o footer para a direita da aba */
 }
 
 #Aba {
-    width: 35vh;
-    height: 100%;
+    width: 45vh;
+    height: 85vh;
     background-color: #525252;
     position: fixed;
-    left: 0; /* Fixa na borda esquerda */
+    left: 0; 
+    /* white-space: nowrap; REMOVIDO: Isso impedia a quebra de linha para a ABA inteira */
+    text-align: center;
+    padding: 15px; /* Espaçamento interno para o conteúdo */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se o conteúdo exceder a altura */
+    overflow-x: hidden; /* Esconde qualquer transbordamento horizontal indesejado */
+}
+
+#Aba h3 {
+    text-align: center; /* Centraliza o título "Registros Anteriores" */
+    color: #fff; /* Exemplo de cor para o título */
+    margin-bottom: 20px;
+}
+
+#lista-registros {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o padding padrão da ul */
+    margin: 0; /* Remove a margem padrão da ul */
+    text-align: left; /* Alinha o texto dos itens da lista à esquerda dentro da aba */
+}
+
+#lista-registros li {
+    background-color: #6a6a6a; /* Cor de fundo para cada item da lista */
+    margin-bottom: 15px; /* Espaçamento entre os itens */
+    padding: 10px; /* Espaçamento interno de cada item */
+    border-radius: 5px; /* Cantos arredondados para os itens */
+    color: #fff; /* Cor do texto dos registros */
+    word-wrap: break-word; /* Quebra palavras longas para caber no contêiner */
+    overflow-wrap: break-word; /* Outra propriedade para quebrar palavras */
+    /* text-overflow: ellipsis; REMOVIDO: Isso cortaria o texto, e você quer ele inteiro */
+    /* white-space: normal; Garante que o texto quebre normalmente, oposto a nowrap */
+}
+
+#lista-registros li strong {
+    display: block; /* Garante que o título e data fiquem em sua própria linha */
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+#lista-registros li p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#lista-registros li em {
+    display: block; /* Garante que "Privado" e "Profissional" fiquem em sua própria linha */
+    font-size: 0.9em;
+    color: #ddd;
 }
