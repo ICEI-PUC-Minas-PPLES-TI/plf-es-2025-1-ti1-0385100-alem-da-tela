@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diario.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div id="cabecario"> 💜 Além da Tela</div>
+    </header>
+    <main>
+    <h1 id=Diary>Diário pessoal</h1>
+
+    <div id = txtgeral>Data do registro:</div>
+    <input type="date" id="data-registro" name="data-registro">
+
+    <div id = txtgeral>Titulo (opcional):</div>
+    <input type="text" id="titulo-registro" name="titulo-registro" placeholder="Escreva um título...">
+
+    <div id = txtgeral>O que você gostaria de escrever hoje?:</div>
+    <textarea id="registro" name="registro" placeholder="Escreva aqui..."></textarea>
+
+    <div id = txtgeral>Deseja marcar como privado?:</div><br>
+  <div class="radio-opcao">
+    <input type="radio" id="sim" name="privado" value="sim">
+    <label for="sim">Sim</label>
+  </div>
+  <div class="radio-opcao">
+    <input type="radio" id="nao" name="privado" value="nao">
+    <label for="nao">Não</label>
+  </div>
+
+  <div id = txtgeral>Deseja mandar para um profissional?:</div><br>
+  <div class="radio-opcao">
+    <input type="radio" id="sim-profissional" name="profissional" value="sim">
+    <label for="sim-profissional">Sim</label>
+  </div>
+  <div class="radio-opcao">
+    <input type="radio" id="nao-profissional" name="profissional" value="nao">
+    <label for="nao-profissional">Não</label>
+  </div>
+
+
+<div id="txtgeral"></div><button id="btn-enviar" type="button">Enviar</button>
+
+</main>
+
+<footer>
+  <p>© 2025 Além da Tela. Todos os direitos reservados.</p>
+  <p>Em caso de emergência, ligue 188 (CVV) ou procure ajuda médica imediata
+<script src="diario.js"></script>
+</body>
+</html>
