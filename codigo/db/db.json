@@ -56,50 +56,10 @@
   ],
   "registros": [
     {
-      "id": "1",
-      "data": "2025-05-17",
-      "titulo": "Dia tranquilo",
-      "conteudo": "Hoje me senti mais calmo e consegui respirar melhor.",
-      "privado": false,
-      "profissional": false
-    },
-    {
-      "id": "2",
-      "data": "2025-05-18",
-      "titulo": "Ansiedade forte",
-      "conteudo": "Foi difícil controlar a ansiedade, mas tentei técnicas de respiração.",
-      "privado": true,
-      "profissional": false
-    },
-    {
-      "id": "1ccf",
-      "data": "2025-06-09",
-      "titulo": "Teste",
-      "conteudo": "Teste",
-      "privado": false,
-      "profissional": false
-    },
-    {
-      "id": "c903",
-      "data": "2025-06-09",
-      "titulo": "ok",
-      "conteudo": "ok",
-      "privado": false,
-      "profissional": false
-    },
-    {
-      "id": "a7a2",
-      "data": "2025-06-09",
-      "titulo": "ok",
-      "conteudo": "ok",
-      "privado": false,
-      "profissional": false
-    },
-    {
-      "id": "ec5b",
-      "data": "2025-06-09",
-      "titulo": "a",
-      "conteudo": "a",
+      "id": "b5ee",
+      "data": "2025-06-10",
+      "titulo": "Nada demais",
+      "conteudo": "Meu dia foi bem, não tenho do que reclamar.",
       "privado": false,
       "profissional": false
     }

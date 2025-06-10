@@ -1,3 +1,11 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Organiza header, main e footer em coluna */
+}
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -6,7 +14,7 @@ body{
     overflow-x: hidden; 
     max-width: 100vw;   
     box-sizing: border-box; 
-    padding-top:5.2vh;
+    padding-top:4vh;
 
 }
 
@@ -28,7 +36,12 @@ body{
     main {
       padding-top: 10vh; 
       transition: padding-top 0.3s ease;
-    }
+      display: flex;
+      justify-content: space-between;
+      padding: 20px; /* Mantém o padding */
+      gap: 20px;
+      flex-grow: 1;
+     }
 
     #Diary{
       padding-left: 5vh;
@@ -53,12 +66,12 @@ body{
   color: #333;
   margin-left: 5vh;
   margin-top: 5vh;
-  font-family: 'Segoe UI', 'Arial', sans-serif; /* fonte mais suave */
-  font-size: 16px;                              /* tamanho agradável */
-  color: #333;                                   /* tom mais suave que preto */
-  letter-spacing: 0.5px;                         /* espaço entre letras */
-  font-weight: 400;                              /* evita ficar "pesado" */
-  background-color: #f9f9f9;                     /* tom leve no fundo */
+  font-family: 'Segoe UI', 'Arial', sans-serif; 
+  font-size: 16px;                              
+  color: #333;                                   
+  letter-spacing: 0.5px;                         
+  font-weight: 400;                              
+  background-color: #f9f9f9;                     
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -91,22 +104,22 @@ textarea {
   box-sizing: border-box;
   margin-left: 5vh;
   margin-top: 5vh;
-  resize: none; /* usuário não pode arrastar pra redimensionar */
-  overflow-y: hidden; /* evita barra de rolagem vertical */
+  resize: none;
+  overflow-y: hidden;
 }
 
 .radio-opcao {
       display: inline-flex;
       align-items: center;
-      margin-right: 10px; /* espaçamento entre as opções */
-      font-size: 18px;    /* tamanho da fonte */
+      margin-right: 10px; 
+      font-size: 18px;    
       margin-left:5vh;
     }
 
     .radio-opcao input[type="radio"] {
       width: 20px;
       height: 20px;
-      margin-right: 8px; /* espaço entre o botão e o texto */
+      margin-right: 8px; 
     }
 
     label {
@@ -138,10 +151,10 @@ footer {
     padding: 15px 10px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 14px;
-    position: fixed; /* Fixado na viewport */
-    bottom: 0;       /* Ancorado no rodapé */
-    width: calc(100% - 30vh); /* Reduz a largura considerando a aba */
-    left: 45vh;      /* Move o footer para a direita da aba */
+    position: fixed; 
+    bottom: 0;       
+    width: calc(100% - 30vh); 
+    left: 45vh;      
 }
 
 #Aba {
@@ -150,41 +163,38 @@ footer {
     background-color: #525252;
     position: fixed;
     left: 0; 
-    /* white-space: nowrap; REMOVIDO: Isso impedia a quebra de linha para a ABA inteira */
     text-align: center;
-    padding: 15px; /* Espaçamento interno para o conteúdo */
-    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
-    overflow-y: auto; /* Adiciona barra de rolagem vertical se o conteúdo exceder a altura */
-    overflow-x: hidden; /* Esconde qualquer transbordamento horizontal indesejado */
+    padding: 15px; 
+    box-sizing: border-box; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
 }
 
 #Aba h3 {
-    text-align: center; /* Centraliza o título "Registros Anteriores" */
-    color: #fff; /* Exemplo de cor para o título */
+    text-align: center; 
+    color: #fff; 
     margin-bottom: 20px;
 }
 
 #lista-registros {
-    list-style: none; /* Remove os marcadores de lista padrão */
-    padding: 0; /* Remove o padding padrão da ul */
-    margin: 0; /* Remove a margem padrão da ul */
-    text-align: left; /* Alinha o texto dos itens da lista à esquerda dentro da aba */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    text-align: left; 
 }
 
 #lista-registros li {
-    background-color: #6a6a6a; /* Cor de fundo para cada item da lista */
-    margin-bottom: 15px; /* Espaçamento entre os itens */
-    padding: 10px; /* Espaçamento interno de cada item */
-    border-radius: 5px; /* Cantos arredondados para os itens */
-    color: #fff; /* Cor do texto dos registros */
-    word-wrap: break-word; /* Quebra palavras longas para caber no contêiner */
-    overflow-wrap: break-word; /* Outra propriedade para quebrar palavras */
-    /* text-overflow: ellipsis; REMOVIDO: Isso cortaria o texto, e você quer ele inteiro */
-    /* white-space: normal; Garante que o texto quebre normalmente, oposto a nowrap */
+    background-color: #6a6a6a; 
+    margin-bottom: 15px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: #fff; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
 }
 
 #lista-registros li strong {
-    display: block; /* Garante que o título e data fiquem em sua própria linha */
+    display: block; 
     margin-bottom: 5px;
     font-size: 1.1em;
 }
@@ -195,7 +205,283 @@ footer {
 }
 
 #lista-registros li em {
-    display: block; /* Garante que "Privado" e "Profissional" fiquem em sua própria linha */
+    display: block; 
     font-size: 0.9em;
     color: #ddd;
 }
+
+registro-actions {
+  display: flex; 
+  gap: 10px;    
+  margin-top: 10px; 
+}
+
+.registro-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.edit-btn {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336; 
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn:hover {
+  background-color: #da190b;
+}
+
+
+.registro-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+/* tela_gerada.css */
+
+/* Estilos gerais (seus estilos existentes para header, footer, etc.) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333; /* Fundo escuro */
+  color: #eee;
+}
+
+header {
+  background-color: #222;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 2px solid #555;
+}
+
+#cabecario {
+  font-size: 2em;
+  font-weight: bold;
+  color: #9370DB; /* Cor roxa */
+}
+
+main {
+  display: flex; /* Habilita o layout flexbox para as colunas */
+  justify-content: space-between; /* Espaço entre as colunas */
+  padding: 20px;
+  gap: 20px; /* Espaço entre as colunas */
+  min-height: calc(100vh - 120px); /* Ajusta a altura mínima para o conteúdo principal */
+}
+
+#left-panel {
+  flex: 0 0 300px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex; /* Adiciona flex para organizar o conteúdo interno */
+  flex-direction: column; /* Organiza os itens em coluna */
+  max-height: calc(100vh - 120px); /* Altura máxima para o painel esquerdo */
+  overflow-y: auto; /* Adiciona scroll se o conteúdo for muito longo */
+}
+
+#right-panel {
+  flex: 1;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px; /* Mantém o padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto; /* Adicionar scroll para o painel direito também */
+  max-height: calc(100vh - 120px); /* Altura máxima para o painel direito */
+}
+
+#Aba h3 {
+  color: #9370DB;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#lista-registros {
+  list-style: none;
+  padding: 0;
+}
+
+.registro-item {
+  background-color: #3a3a3a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.registro-item strong {
+  color: #9370DB;
+}
+
+.registro-item p {
+  color: #bbb;
+}
+
+.registro-item em {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.registro-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-end; 
+}
+
+.registro-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336; 
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn:hover {
+  background-color: #da190b;
+}
+
+
+#ultimo-registro-destaque {
+  background-color: #444;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding-bottom: 50px; 
+}
+
+#ultimo-registro-destaque h2 {
+  color: #9370DB; 
+  margin-bottom: 20px;
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+.destaque-card {
+  background-color: #555; 
+  border: 1px solid #777;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.destaque-card h3 {
+  color: #eee;
+  margin-bottom: 12px;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.destaque-card p {
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.destaque-card p strong {
+  color: #fff;
+}
+
+.destaque-card em {
+  color: #aaa;
+  font-size: 0.95em;
+  display: block; 
+  margin-top: 5px;
+}
+
+footer {
+  background-color: #222;
+  color: #888;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  border-top: 2px solid #555;
+  
+  flex-shrink: 0; 
+}
+
+
+
+
+
+.header-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header-link a {
+  color: #9370DB; 
+  text-decoration: none; 
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header-link a:hover {
+  color: #BA55D3; 
+  text-decoration: underline; 
+}
+
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 20px;
+  color: white
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+
+
+
+
+
+

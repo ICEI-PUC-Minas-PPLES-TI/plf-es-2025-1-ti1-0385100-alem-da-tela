@@ -52,12 +52,12 @@ body{
   color: #333;
   margin-left: 5vh;
   margin-top: 5vh;
-  font-family: 'Segoe UI', 'Arial', sans-serif; /* fonte mais suave */
-  font-size: 16px;                              /* tamanho agradável */
-  color: #333;                                   /* tom mais suave que preto */
-  letter-spacing: 0.5px;                         /* espaço entre letras */
-  font-weight: 400;                              /* evita ficar "pesado" */
-  background-color: #f9f9f9;                     /* tom leve no fundo */
+  font-family: 'Segoe UI', 'Arial', sans-serif; 
+  font-size: 16px;                              
+  color: #333;                                  
+  letter-spacing: 0.5px;                         
+  font-weight: 400;                              
+  background-color: #f9f9f9;                    
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -90,22 +90,22 @@ textarea {
   box-sizing: border-box;
   margin-left: 5vh;
   margin-top: 5vh;
-  resize: none; /* usuário não pode arrastar pra redimensionar */
-  overflow-y: hidden; /* evita barra de rolagem vertical */
+  resize: none; 
+  overflow-y: hidden; 
 }
 
 .radio-opcao {
       display: inline-flex;
       align-items: center;
-      margin-right: 10px; /* espaçamento entre as opções */
-      font-size: 18px;    /* tamanho da fonte */
+      margin-right: 10px; 
+      font-size: 18px;    
       margin-left:5vh;
     }
 
     .radio-opcao input[type="radio"] {
       width: 20px;
       height: 20px;
-      margin-right: 8px; /* espaço entre o botão e o texto */
+      margin-right: 8px; 
     }
 
     label {
@@ -131,13 +131,13 @@ textarea {
 }
 
 footer {
-  background-color: #222;       /* fundo escuro */
-  color: #eee;                  /* texto claro */
-  text-align: center;           /* centralizado */
-  padding: 15px 10px;           /* espaço interno */
+  background-color: #222;       
+  color: #eee;                 
+  text-align: center;           
+  padding: 15px 10px;          
   font-family: 'Segoe UI', sans-serif;
   font-size: 14px;
-  position: relative;           /* pode ser static ou fixed, depende do efeito */
+  position: relative;          
   bottom: 0;
   width: 100%;
   margin-top: 10vh;
