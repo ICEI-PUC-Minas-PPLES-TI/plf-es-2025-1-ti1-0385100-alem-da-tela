@@ -85,3 +85,43 @@ function carregarRespostas() {
 })
 .then(res => res.json())
 .then(data => console.log(data));
+const phrases = {
+  triste: [ "Tudo bem sentir-se triste às vezes.",
+            "Permita-se chorar.",
+            "Mesmo nos dias nublados, o sol ainda está lá." ],
+  feliz:  [ "Compartilhe sua alegria!",
+            "A felicidade é ainda maior quando dividida.",
+            "Sorria, você está vivo!" ],
+  aflito: [ "Respire fundo: um passo de cada vez.",
+            "Você é mais forte do que pensa.",
+            "Procure apoio, você não está só." ],
+  ansioso:[ "Traga sua atenção para o presente.",
+            "A ansiedade chega e também vai.",
+            "Faça uma pausa; seu corpo agradece." ],
+  nervoso:[ "Solte os ombros e alongue o pescoço.",
+            "Transforme a energia nervosa em ação positiva.",
+            "Você já superou desafios antes." ],
+  angustiado:[ "Seja gentil consigo mesmo.",
+               "Falar com alguém ajuda.",
+               "Você está fazendo o melhor que pode." ]
+};
+
+const selectEl  = document.getElementById("emotion");
+const phraseEl  = document.getElementById("phrase");
+const btnPhrase = document.getElementById("showPhraseBtn");
+
+function randomItem(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function showPhrase() {
+  const emotion = selectEl.value;
+  if (!emotion) {
+    phraseEl.textContent = "Por favor, escolha uma emoção.";
+    return;
+  }
+  phraseEl.textContent = randomItem(phrases[emotion]);
+}
+
+btnPhrase.addEventListener("click", showPhrase);
+selectEl.addEventListener("change", () => phraseEl.textContent = "");

@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="UTF-8">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina login </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<div class="quadro">
-<body>
-    <h1>Entrar</h1>
-<div class="login"><input type="text" placeholder="Usuário"></div>
-<div class="senha"><input type="text" placeholder="Senha"></div>
-   
-    <div class="botao">
-        <button >Entrar</button>
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como você se sente hoje?</title>
+    <link rel="stylesheet" href="2.css">
+    </head>
+    <body>
+    <div class="card">
+        <h1>Como você se sente hoje?</h1>
+
+        <label for="emotion">Selecione sua emoção:</label>
+        <select id="emotion">
+        <option value="" selected hidden>Escolha...</option>
+        <option value="triste">Triste</option>
+        <option value="feliz">Feliz</option>
+        <option value="aflito">Aflito</option>
+        <option value="ansioso">Ansioso</option>
+        <option value="nervoso">Nervoso</option>
+        <option value="angustiado">Angustiado</option>
+        </select>
+
+        <button id="showPhraseBtn">Mostrar frase</button>
+
+        <p id="phrase"></p>
     </div>
-    <div class="cadastro">
-        <p><button>Cadastrar</button></p>
-    </div>
-    <div class="esqueci">
-        <p><button>Esqueci a senha </button></p>
-    </div>
-</div>
-</body>
-</html>
+
+    <script src="miguel1.js" defer></script>
+    </body>
+    </html>

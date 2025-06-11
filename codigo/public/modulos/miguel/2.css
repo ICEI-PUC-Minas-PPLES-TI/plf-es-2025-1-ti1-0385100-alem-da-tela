@@ -1,63 +1,90 @@
-body{
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-.quadro{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    width: 50%;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4a90e2 0%, rgb(255, 0, 255) 100%);
+  color: #1e1e1e;
+  padding: 1rem;
 }
-.login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}.senha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px ;
-    border-radius: 20px;
+
+.card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  animation: fadeIn 0.7s ease forwards;
 }
-h1{
-    text-align: center;
-    color: #333;
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-button{
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333333;
 }
-button:hover{
-    background-color: #0056b3;
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
 }
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px ;
-    border-radius: 20px;
+
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgb(255, 0, 255);
+  border-radius: 0.75rem;
+  background: #f7f9fc;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.2s;
 }
-.cadastro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-radius: 20px;
+
+select:focus {
+  outline: none;
+  border-color: rgb(255, 0, 255);
 }
-.esqueci{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-radius: 20px;
+
+button {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  background: rgb(255, 0, 255);
+  border: none;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+#phrase {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.4;
+  color: #444444;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
 }
