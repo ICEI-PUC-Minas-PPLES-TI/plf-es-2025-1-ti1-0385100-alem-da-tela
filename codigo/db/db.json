@@ -1,21 +1,21 @@
 {
   "recursos": [
-    { 
-      "id" : 1,
+    {
+      "id": "1",
       "idNome": "meditacao",
       "titulo": "Meditação Guiada",
       "descricao": "Aprenda técnicas simples de meditação para o dia a dia.",
       "imagem": ""
     },
-    { 
-      "id" : 2,
+    {
+      "id": "2",
       "idNome": "gratidao",
       "titulo": "Diário de Gratidão",
       "descricao": "Mantenha um registro diário de momentos positivos.",
       "imagem": "gratidao.jpg"
     },
-    { 
-      "id" : 3,
+    {
+      "id": "3",
       "idNome": "respiracao",
       "titulo": "Exercícios de Respiração",
       "descricao": "Técnicas de respiração para reduzir ansiedade.",
@@ -24,15 +24,15 @@
   ],
   
   "comunidades": [
-    { 
-      "id" : 1,
+    {
+      "id": "1",
       "idNome": "grupo-ansiedade",
       "titulo": "Grupo de Ansiedade",
       "descricao": "Compartilhe experiências e aprenda estratégias.",
       "imagem": ""
     },
-    { 
-      "id" : 2,
+    {
+      "id": "2",
       "idNome": "depressao",
       "titulo": "Depressão e Recuperação",
       "descricao": "Encontre apoio em sua jornada.",
@@ -52,19 +52,53 @@
   ],
 
   "profissionais": [
-    { 
-      "id" : 1,
+    {
+      "id": "1",
       "idNome": "psicologo-online",
       "titulo": "Psicólogos Online",
       "descricao": "Consultas por videoconferência.",
       "imagem": ""
     },
-    { 
-      "id" : 2,
+    {
+      "id": "2",
       "idNome": "terapia-grupo",
       "titulo": "Terapia em Grupo",
       "descricao": "Sessões terapêuticas em grupo.",
       "imagem": ""
+    }
+  ],
+  "registros": [
+    {
+      "id": 1,
+      "data": "2024-06-10",
+      "titulo": "Preciso de ajuda profissional",
+      "conteudo": "Estou me sentindo muito ansioso ultimamente e não sei o que fazer. Gostaria de uma orientação.",
+      "privado": false,
+      "profissional": true
+    },
+    {
+      "id": 2,
+      "data": "2024-06-09",
+      "titulo": "Desabafo respondido (exemplo)",
+      "conteudo": "Tive um dia difícil, mas consegui lidar com os problemas. Gostaria de uma reflexão.",
+      "privado": false,
+      "profissional": true
+    },
+    {
+      "id": 3,
+      "data": "2024-06-08",
+      "titulo": "Diário pessoal",
+      "conteudo": "Hoje o dia foi bom, fiz caminhada e me senti bem.",
+      "privado": false,
+      "profissional": false
+    }
+  ],
+  "respostas": [
+    {
+      "id": 1,
+      "registroId": 2,
+      "dataResposta": "2024-06-9",
+      "texto": "Parabéns por conseguir superar os desafios do dia! É importante reconhecer essas pequenas vitórias. Continue assim!"
     }
   ]
 }
