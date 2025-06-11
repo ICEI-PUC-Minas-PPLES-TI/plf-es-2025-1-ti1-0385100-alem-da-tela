@@ -1,116 +1,131 @@
-// Este arquivo será responsável por carregar e exibir os registros na tela_gerada.html
-
 function carregarRegistros() {
     const listaRegistros = document.getElementById("lista-registros");
-    const ultimoRegistroDestaque = document.getElementById("ultimo-registro-destaque"); // Novo elemento
-    
+    const ultimoRegistroDestaque = document.getElementById("ultimo-registro-destaque");
+
     if (!listaRegistros) {
         console.warn("Elemento #lista-registros não encontrado. Verifique tela_gerada.html.");
         return;
     }
-    if (!ultimoRegistroDestaque) { // Verificação para o novo elemento
+    if (!ultimoRegistroDestaque) {
         console.warn("Elemento #ultimo-registro-destaque não encontrado. Verifique tela_gerada.html.");
         return;
     }
-  
-    listaRegistros.innerHTML = '';
-    ultimoRegistroDestaque.innerHTML = ''; // Limpa o conteúdo antes de carregar
 
-    fetch("http://localhost:3000/registros")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao carregar registros: ' + response.statusText);
-            }
+    listaRegistros.innerHTML = '';
+    ultimoRegistroDestaque.innerHTML = '<h2>Carregando...</h2>';
+
+    Promise.all([
+        fetch("http://localhost:3000/registros").then(response => {
+            if (!response.ok) throw new Error('Erro ao carregar registros: ' + response.statusText);
+            return response.json();
+        }),
+        fetch("http://localhost:3000/respostas").then(response => {
+            if (!response.ok) throw new Error('Erro ao carregar respostas: ' + response.statusText);
             return response.json();
         })
-        .then(registros => {
-            if (registros && registros.length > 0) {
-                // Ordenar registros por data ou ID para garantir que o "último" seja o mais recente
-                registros.sort((a, b) => {
-                    // Assumindo que 'id' é incremental ou 'data' pode ser usada para ordenação
-                    // Se 'data' for uma string no formato 'YYYY-MM-DD', a comparação direta funciona
-                    if (a.data > b.data) return -1;
-                    if (a.data < b.data) return 1;
-                    return b.id - a.id; // Para o caso de mesma data, use o ID
-                });
+    ])
+    .then(([registros, respostas]) => {
+        const respostasMap = new Map();
+        respostas.forEach(resp => {
+            respostasMap.set(resp.registroId, resp);
+        });
 
-                const ultimoRegistro = registros[0]; // O último registro após a ordenação
+        if (registros && registros.length > 0) {
+            registros.sort((a, b) => {
+                if (a.data > b.data) return -1;
+                if (a.data < b.data) return 1;
+                return b.id - a.id;
+            });
 
-                // Exibir o último registro na área de destaque
+            const ultimoRegistro = registros[0];
+            if (ultimoRegistro) {
+                const respostaDestaque = respostasMap.get(ultimoRegistro.id);
                 ultimoRegistroDestaque.innerHTML = `
-                    <h2>Seu Último Desabafo:</h2>
+                    <h2>Último Registro Destaque</h2>
                     <div class="destaque-card">
                         <h3>${ultimoRegistro.titulo || 'Sem título'}</h3>
                         <p><strong>Data:</strong> ${ultimoRegistro.data}</p>
                         <p>${ultimoRegistro.conteudo}</p>
-                        ${ultimoRegistro.privado ? '<p><em>(Este registro é privado)</em></p>' : ''}
-                        ${ultimoRegistro.profissional ? '<p><em>(Este registro foi enviado para um profissional)</em></p>' : ''}
+                        ${ultimoRegistro.privado ? '<em>(Privado)</em>' : ''}
+                        ${ultimoRegistro.profissional ? '<em>(Enviado para profissional)</em>' : ''}
+                        ${respostaDestaque ? `<div class="resposta-profissional"><strong>Resposta do Profissional (${respostaDestaque.dataResposta || 'Data Desconhecida'}):</strong><p>${respostaDestaque.texto}</p></div>` : ''}
                     </div>
                 `;
-
-                registros.forEach(registro => {
-                    const li = document.createElement("li");
-                    li.innerHTML = `
-                        <strong>${registro.titulo || 'Sem título'}</strong> (${registro.data})<br>
-                        <p>${registro.conteudo}</p>
-                        ${registro.privado ? '<em>(Privado)</em>' : ''}
-                        ${registro.profissional ? '<em>(Enviado para profissional)</em>' : ''}
-                        <div class="registro-actions">
-                            <button class="edit-btn" data-id="${registro.id}">Editar</button>
-                            <button class="delete-btn" data-id="${registro.id}">Excluir</button>
-                        </div>
-                    `;
-                    li.dataset.id = registro.id; 
-                    li.classList.add('registro-item'); 
-  
-                    listaRegistros.appendChild(li);
-                });
-
-                // Add event listeners for edit and delete buttons after they are rendered
-                document.querySelectorAll('.edit-btn').forEach(button => {
-                    button.addEventListener('click', (event) => {
-                        const id = event.target.dataset.id;
-                        window.location.href = `diario.html?id=${id}`; // Redirect to diario.html for editing
-                    });
-                });
-
-                document.querySelectorAll('.delete-btn').forEach(button => {
-                    button.addEventListener('click', (event) => {
-                        const id = event.target.dataset.id;
-                        if (confirm('Tem certeza que deseja excluir este registro?')) {
-                            excluirRegistro(id);
-                        }
-                    });
-                });
-
             } else {
-                listaRegistros.innerHTML = '<li>Nenhum registro encontrado.</li>';
-                ultimoRegistroDestaque.innerHTML = '<h2>Nenhum registro para destaque.</h2>'; // Mensagem para o destaque
+                ultimoRegistroDestaque.innerHTML = '<h2>Nenhum registro para destaque.</h2>';
             }
-        })
-        .catch(error => {
-            console.error("Erro ao carregar registros:", error);
-            listaRegistros.innerHTML = '<li>Erro ao carregar registros.</li>';
-            ultimoRegistroDestaque.innerHTML = '<h2>Erro ao carregar o último registro.</h2>';
-        });
-}
 
-function excluirRegistro(id) {
-    fetch(`http://localhost:3000/registros/${id}`, {
-        method: 'DELETE',
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Registro excluído com sucesso!');
-            carregarRegistros(); // Reload the list and highlight after deletion
+            registros.forEach(registro => {
+                const li = document.createElement("li");
+                li.classList.add('registro-item');
+                li.dataset.id = registro.id;
+
+                const respostaAssociada = respostasMap.get(registro.id);
+
+                li.innerHTML = `
+                    <strong>${registro.titulo || 'Sem título'}</strong> (${registro.data})<br>
+                    <p>${registro.conteudo}</p>
+                    ${registro.privado ? '<em>(Privado)</em>' : ''}
+                    ${registro.profissional ? '<em>(Enviado para profissional)</em>' : ''}
+                    ${respostaAssociada ? `<div class="resposta-profissional"><strong>Resposta do Profissional (${respostaAssociada.dataResposta || 'Data Desconhecida'}):</strong><p>${respostaAssociada.texto}</p></div>` : ''}
+                    <button class="delete-btn" data-id="${registro.id}">Excluir</button>
+                `;
+
+                li.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('delete-btn')) {
+                        return;
+                    }
+                    window.location.href = `diario.html?id=${registro.id}`;
+                });
+
+                listaRegistros.appendChild(li);
+            });
+
+            document.querySelectorAll('.delete-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const id = event.target.dataset.id;
+                    if (confirm('Tem certeza que deseja excluir este registro?')) {
+                        excluirRegistro(id);
+                    }
+                });
+            });
+
         } else {
-            alert('Erro ao excluir registro.');
+            listaRegistros.innerHTML = '<li>Nenhum registro encontrado.</li>';
+            ultimoRegistroDestaque.innerHTML = '<h2>Nenhum registro para destaque.</h2>';
         }
     })
     .catch(error => {
-        console.error('Erro ao excluir registro:', error);
+        console.error("Erro ao carregar registros ou respostas:", error);
+        listaRegistros.innerHTML = '<li>Erro ao carregar registros.</li>';
+        ultimoRegistroDestaque.innerHTML = '<h2>Erro ao carregar o último registro.</h2>';
+    });
+}
+
+function excluirRegistro(id) {
+    Promise.all([
+        fetch(`http://localhost:3000/registros/${id}`, {
+            method: 'DELETE',
+        }),
+        fetch(`http://localhost:3000/respostas?registroId=${id}`).then(res => res.json()).then(respostas => {
+            if (respostas.length > 0) {
+                return fetch(`http://localhost:3000/respostas/${respostas[0].id}`, { method: 'DELETE' });
+            }
+            return Promise.resolve();
+        })
+    ])
+    .then(([registroResponse, respostaResponse]) => {
+        if (registroResponse.ok) {
+            alert('Registro e resposta (se houver) excluídos com sucesso!');
+            carregarRegistros();
+        } else {
+            alert('Erro ao excluir registro principal.');
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao excluir registro ou resposta:', error);
         alert('Erro ao excluir registro.');
     });
 }
-  
+
 document.addEventListener("DOMContentLoaded", carregarRegistros);
