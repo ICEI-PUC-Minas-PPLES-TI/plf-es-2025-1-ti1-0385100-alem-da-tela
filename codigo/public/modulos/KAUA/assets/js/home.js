@@ -5,7 +5,7 @@ function criarCard(item) {
       <h3>${item.titulo}</h3>
       <p>${item.descricao}</p>
       ${item.imagem ? `<img src="${item.imagem}" alt="${item.titulo}" />` : ''}
-      <a href="${item.link || '#'}" class="resource-link">${item.acao || 'Começar Agora'}</a>
+      <a href="${item.link || '#'}" class="resource-link">${item.acao || 'Começar Agora'}</a> //olhar pra q serve esse link
     </article>
   `;
 }
@@ -68,9 +68,39 @@ async function carregarProfissionais() {
   }
 }
 
+// Função para carregar rotinas
+async function carregarRotinas() {
+  try {
+    const resposta = await fetch('http://localhost:3000/rotinas');
+    let rotinas = await resposta.json();
+
+    // Ordenar por horário crescente
+    rotinas.sort((a, b) => a.horario.localeCompare(b.horario));
+
+    const container = document.getElementById('rotina-container');
+    container.innerHTML = '';
+
+    rotinas.forEach(item => {
+      container.innerHTML += `
+        <article class="rotina-card">
+          <div><strong>${item.horario}</strong></div>
+          <div>${item.icone || ''} ${item.nome}</div>
+          <div><small>(${item.categoria})</small></div>
+        </article>
+      `;
+    });
+
+    document.getElementById('rotina-content').classList.remove('hidden');
+  } catch (error) {
+    console.error('Erro ao carregar rotinas:', error);
+  }
+}
+
+
 // Quando a página carregar, chama as funções para carregar todas as seções
 window.addEventListener('DOMContentLoaded', () => {
   carregarRecursos();
   carregarComunidades();
   carregarProfissionais();
+  carregarRotinas(); //rotinas adicionada para rodas automaticamente com os outros cards 
 });
