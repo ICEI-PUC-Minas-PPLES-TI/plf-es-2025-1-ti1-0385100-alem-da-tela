@@ -38,13 +38,13 @@
                   <h2>Recursos de Autocuidado</h2>
                   <img src="/public/modulos/KAUA/assets/img/autocuidado.jpg" alt="Recursos de Autocuidado" class="card-image" />
                   <p>Acesse guias, artigos e ferramentas práticas para cuidar da sua saúde mental.</p>
-                  <a href="detalhes.html?id=1"><button class="card-button">Explorar Recursos</button></a>
+                  <a href="detalhes.html"><button class="card-button">Explorar Recursos</button></a>
               </div>
   
               <div class="card" onclick="showContent('comunidade')">
                   <div class="icon">💭</div>
                   <h2>Comunidade de Apoio</h2>
-                   <img src="public/assets/img/apoio.jpg" alt="Recursos de Autocuidado" class="card-image" />
+                   <img src="/public/modulos/KAUA/assets/img/apoio.jpg" alt="Recursos de Autocuidado" class="card-image" />
                   <p>Conecte-se com pessoas que compartilham experiências semelhantes.</p>
                  <a href="detalhes.html?id=2"><button class="card-button">Participar</button> </a>
               </div>
@@ -52,17 +52,19 @@
               <div class="card" onclick="showContent('profissional')">
                   <div class="icon">📞</div>
                   <h2>Ajuda Profissional</h2>
-                          <img src="public/assets/img/ajuda.png" alt="Recursos de Autocuidado" class="card-image" />
+                          <img src="/public/modulos/KAUA/assets/img/ajuda.png" alt="Recursos de Autocuidado" class="card-image" />
                   <p>Encontre orientação e acesso a profissionais qualificados.</p>
                   <a href="detalhes.html?id=3"> <button class="card-button">Buscar Profissional</button> </a>
               </div>
 
 <!--SPRINT 2, KAUÃ: aqui irei colocar um cadastro de informaçao, as pessoas poderam organizar suas rotinas em horários-->
-              <section id="rotina-content" class="hidden">
-                 <h2>Rotina Diária</h2>
-                 <div id="rotina-container"></div>
-                 <button onclick="carregarRotinas()">Rotina Diária</button>
-              </section>
+               <div class="card" onclick="showContent('profissional')">
+                  <div class="icon">🗓️</div>
+                  <h2>Rotina</h2>
+                          <img src="/public/modulos/KAUA/assets/img/rotina.png" alt="Recursos de Autocuidado" class="card-image" />
+                  <p>Organize sua rotina e deixe a vida mais leve.</p>
+                  <a href="rotina.html"> <button class="card-button">Buscar Profissional</button> </a>
+              </div>
 
 
 
@@ -201,6 +203,6 @@
           <p class="emergency">Em caso de emergência, ligue 188 (CVV) ou procure ajuda médica imediata.</p>
       </footer>
   
-      <script src="./assets/js/app.js"></script>
+      <script src="/public/modulos/KAUA/assets/js/home.js"></script>
   </body>
   </html>

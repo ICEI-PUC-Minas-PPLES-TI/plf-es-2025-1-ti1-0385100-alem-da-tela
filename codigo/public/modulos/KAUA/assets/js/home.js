@@ -1,14 +1,3 @@
-// Função genérica para criar um card HTML com os dados
-function criarCard(item) {
-  return `
-    <article class="resource-card">
-      <h3>${item.titulo}</h3>
-      <p>${item.descricao}</p>
-      ${item.imagem ? `<img src="${item.imagem}" alt="${item.titulo}" />` : ''}
-      <a href="${item.link || '#'}" class="resource-link">${item.acao || 'Começar Agora'}</a> //olhar pra q serve esse link
-    </article>
-  `;
-}
 
 // Função para carregar recursos
 async function carregarRecursos() {
@@ -16,7 +5,7 @@ async function carregarRecursos() {
     const resposta = await fetch('http://localhost:3000/recursos');
     const recursos = await resposta.json();
 
-    const container = document.getElementById('resource-container');
+    const container = document.getElementById('resource-link');
     container.innerHTML = '';
 
     recursos.forEach(recurso => {
@@ -29,7 +18,7 @@ document.getElementById('recursos-content').classList.remove('hidden');
     console.error('Erro ao carregar recursos:', error);
   }
 }
-
+ 
 // Função para carregar comunidades
 async function carregarComunidades() {
   try {

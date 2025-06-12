@@ -8,7 +8,7 @@
     }
 
     // Aqui você muda para a URL do seu JSON Server (por padrão: http://localhost:3000)
-    fetch(`http://localhost:3000/recursos/${recursoId}`)
+    fetch(`http://localhost:3000/recursos?id=${recursoId}`)
       .then((res) => res.json())
       .then((dados) => {
         if (dados.length === 0) {

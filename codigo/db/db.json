@@ -22,7 +22,6 @@
       "imagem": ""
     }
   ],
-  
   "comunidades": [
     {
       "id": "1",
@@ -39,18 +38,64 @@
       "imagem": ""
     }
   ],
-
-
-  "rotina":[
+  "rotina": [
     {
-    "id" : 1,
-    "horario": "08:00",
-    "Nome": "meditacao",
-    "categoria": "saude",
-    "icone": "🧘‍♂️"
+      "id": "9a0d",
+      "nome": "Estudar",
+      "icone": "📝",
+      "horario": "07:30",
+      "categoria": "Estudo"
+    },
+    {
+      "id": "ee17",
+      "nome": "Kauã Rodrigues",
+      "icone": "📝",
+      "horario": "08:09",
+      "categoria": "Estudo"
+    },
+    {
+      "id": "83bb",
+      "nome": "Ler",
+      "icone": "📝",
+      "horario": "12:30",
+      "categoria": "Leitura"
+    },
+    {
+      "id": "74b8",
+      "nome": "academia",
+      "icone": "🏋🏻‍♂️",
+      "horario": "17:00",
+      "categoria": "pegar peso"
+    },
+    {
+      "id": "188b",
+      "nome": "Kauã Rodrigues",
+      "icone": "📝",
+      "horario": "08:07",
+      "categoria": "pegar peso"
+    },
+    {
+      "id": "5c35",
+      "nome": "academia",
+      "icone": "🏋🏻‍♂️",
+      "horario": "05:06",
+      "categoria": "pegar peso"
+    },
+    {
+      "id": "2c90",
+      "nome": "teste",
+      "icone": "teste",
+      "horario": "05:06",
+      "categoria": "teste"
+    },
+    {
+      "id": "fb68",
+      "nome": "faculdade",
+      "icone": "📚",
+      "horario": "08:50",
+      "categoria": "Estudo"
     }
   ],
-
   "profissionais": [
     {
       "id": "1",
@@ -69,36 +114,48 @@
   ],
   "registros": [
     {
-      "id": 1,
+      "id": "1",
       "data": "2024-06-10",
       "titulo": "Preciso de ajuda profissional",
       "conteudo": "Estou me sentindo muito ansioso ultimamente e não sei o que fazer. Gostaria de uma orientação.",
       "privado": false,
+      "dataResposta": "",
+      "resposta": "",
       "profissional": true
     },
     {
-      "id": 2,
+      "id": "2",
       "data": "2024-06-09",
       "titulo": "Desabafo respondido (exemplo)",
       "conteudo": "Tive um dia difícil, mas consegui lidar com os problemas. Gostaria de uma reflexão.",
+      "dataResposta": "",
+      "resposta": "",
       "privado": false,
       "profissional": true
     },
     {
-      "id": 3,
+      "id": "3",
       "data": "2024-06-08",
       "titulo": "Diário pessoal",
       "conteudo": "Hoje o dia foi bom, fiz caminhada e me senti bem.",
+      "dataResposta": "",
+      "resposta": "",
       "privado": false,
       "profissional": false
     }
   ],
   "respostas": [
     {
-      "id": 1,
+      "id": "1",
       "registroId": 2,
       "dataResposta": "2024-06-9",
       "texto": "Parabéns por conseguir superar os desafios do dia! É importante reconhecer essas pequenas vitórias. Continue assim!"
+    },
+    {
+      "id": "fb54",
+      "registroId": 1,
+      "dataResposta": "2025-06-11",
+      "texto": "ok"
     }
   ]
 }
