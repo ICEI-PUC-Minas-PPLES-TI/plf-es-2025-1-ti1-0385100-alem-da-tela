@@ -41,9 +41,24 @@ nav {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-weight: bold;
+  color: #3a7f74;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+.imgPrincipal{
+  align-items: center;
+  height: 250px;
+  width: auto;
+
 }
 
 .nav-links {
