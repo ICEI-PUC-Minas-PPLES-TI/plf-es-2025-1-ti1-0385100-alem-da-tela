@@ -1,127 +1,228 @@
-.auth-page {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--dark-bg);
-    padding: 1rem;
+:root {
+  --primary-color: #7dcfb6;
+  --primary-dark: #58b19f;
+  --dark-bg: #e6ecea;
+  --card-bg: #ffffff;
+  --text-color: #1a1a1a;
+  --text-secondary: #4f4f4f;
+  --danger-color: #ef4444;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.auth-container {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 100%;
-    max-width: 400px;
-    backdrop-filter: blur(10px);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.auth-header {
-    text-align: center;
-    margin-bottom: 2rem;
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-.auth-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
+.container {
+  width: 100%;
+  max-width: 400px;
 }
 
-.auth-header h1 {
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
+.auth-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.auth-header p {
-    color: var(--text-secondary);
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-.auth-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.heart {
+  color: var(--primary-color);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
-    color: var(--text-color);
-    font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
 }
 
 .form-group input {
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--text-color);
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus {
-    outline: none;
-    border-color: var(--primary-color);
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(125, 207, 182, 0.1);
 }
 
-.auth-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 1rem;
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.auth-button:hover {
-    background-color: var(--primary-dark);
+.checkbox-group input[type="checkbox"] {
+  width: auto;
 }
 
-.auth-footer {
-    margin-top: 2rem;
-    text-align: center;
-    color: var(--text-secondary);
+.checkbox-group label {
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
-.auth-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
+.btn-primary {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
-.auth-footer a:hover {
-    color: var(--primary-dark);
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
 }
 
-.forgot-password {
-    display: block;
-    margin-top: 1rem;
-    font-size: 0.9rem;
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
-/* Input masks styling */
-input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+.auth-links {
+  text-align: center;
 }
 
-/* Date input styling */
-input[type="date"] {
-    color-scheme: dark;
+.auth-links p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
-/* Error states */
-.form-group input:invalid {
-    border-color: var(--danger-color);
+.link-primary {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link-primary:hover {
+  color: var(--primary-dark);
+}
+
+.link-secondary {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.link-secondary:hover {
+  color: var(--text-color);
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+#btn-logout {
+  background-color: transparent;
+  border: 2px solid var(--primary-color, #4f46e5);
+  color: var(--primary-color, #4f46e5);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+#btn-logout:hover {
+  background-color: var(--primary-color, #4f46e5);
+  color: white;
+}
+
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+  border-left: 4px solid var(--danger-color);
+}
+
+.success-message {
+  background-color: rgba(125, 207, 182, 0.1);
+  color: var(--primary-dark);
+  border-left: 4px solid var(--primary-color);
 }
 
 @media (max-width: 480px) {
-    .auth-container {
-        padding: 1.5rem;
-    }
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
 }

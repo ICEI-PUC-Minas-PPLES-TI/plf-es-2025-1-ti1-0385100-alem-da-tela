@@ -1,62 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cadastro - Além da Tela" />
     <title>Cadastro - Além da Tela</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="auth.css">
-</head>
-<body class="auth-page">
-    <div class="auth-container">
-        <div class="auth-header">
-            <div class="auth-icon">👤</div>
-            <h1>Cadastro</h1>
-            <p>Preencha seus dados para realizar o cadastro</p>
-        </div>
-        
-        <form class="auth-form" id="cadastroForm" onsubmit="handleCadastro(event)">
-            <div class="form-group">
-                <label for="nomeCompleto">Nome Completo</label>
-                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
-            </div>
+    <link rel="stylesheet" href="../../assets/css/auth.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="auth-card">
+        <form id="auth-form" class="auth-form">
+          <h2>Criar nova conta</h2>
 
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+          <div class="form-group">
+            <label for="name">Nome completo</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Seu nome"
+              required
+            />
+          </div>
 
-            <div class="form-group">
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required
-                       pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-                       title="Digite um CPF válido no formato: 000.000.000-00">
-            </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
 
-            <div class="form-group">
-                <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" id="dataNascimento" name="dataNascimento" required>
-            </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Mínimo 6 caracteres"
+              required
+              minlength="6"
+            />
+          </div>
 
-            <div class="form-group">
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required
-                       pattern="\(\d{2}\) \d{5}-\d{4}"
-                       title="Digite um telefone válido no formato: (00) 00000-0000">
-            </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirmar senha</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Confirme sua senha"
+              required
+            />
+          </div>
 
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
+          <div class="form-group">
+            <label for="tipo">Tipo de usuário</label>
+            <select id="tipo" name="tipo" required>
+              <option value="comum">Comum</option>
+              <option value="especialista">Especialista</option>
+            </select>
+          </div>
 
-            <button type="submit" class="auth-button">Cadastrar</button>
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              Aceito os
+              <a href="#" class="link-primary">termos de uso</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-primary">Criar conta</button>
+
+          <div class="auth-links">
+            <p>
+              Já tem conta?
+              <a href="../../../index.html" class="link-primary">Faça login</a>
+            </p>
+          </div>
         </form>
-
-        <div class="auth-footer">
-            <p>Já tem uma conta? <a href="login.html">Fazer Login</a></p>
-        </div>
+      </div>
     </div>
-    <script src="auth.js"></script>
-</body>
+
+    <script src="../../assets/js/auth.js"></script>
+  </body>
 </html>
