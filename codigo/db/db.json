@@ -1,161 +1,206 @@
 {
-  "recursos": [
+  "desabafos": [
     {
       "id": "1",
-      "idNome": "meditacao",
-      "titulo": "Meditação Guiada",
-      "descricao": "Aprenda técnicas simples de meditação para o dia a dia.",
-      "imagem": ""
+      "titulo": "Me sinto sobrecarregado",
+      "texto": "Tenho me sentido muito cansado e sem apoio. Não sei o que fazer.",
+      "data": "2025-06-19T08:30:00.000Z",
+      "status": "respondido",
+      "resposta": "Vamos marcar uma terapia?",
+      "dataResposta": "2025-06-19T17:37:15.639Z"
     },
     {
       "id": "2",
-      "idNome": "gratidao",
-      "titulo": "Diário de Gratidão",
-      "descricao": "Mantenha um registro diário de momentos positivos.",
-      "imagem": "gratidao.jpg"
+      "titulo": "Dificuldade com ansiedade",
+      "texto": "Às vezes não consigo controlar meus pensamentos.",
+      "data": "2025-06-18T17:10:00.000Z",
+      "status": "respondido",
+      "resposta": "É importante reconhecer isso e buscar ajuda profissional. Exercícios de respiração também podem ajudar.",
+      "dataResposta": "2025-06-18T18:00:00.000Z"
     },
     {
       "id": "3",
-      "idNome": "respiracao",
-      "titulo": "Exercícios de Respiração",
-      "descricao": "Técnicas de respiração para reduzir ansiedade.",
-      "imagem": ""
+      "titulo": "Ansiedade constante",
+      "texto": "Tenho sentido meu coração acelerar sem motivo, principalmente à noite.",
+      "data": "2025-06-19T10:15:00.000Z",
+      "status": "pendente"
+    },
+    {
+      "id": "4",
+      "titulo": "Solidão mesmo cercado de pessoas",
+      "texto": "Estou sempre com amigos e família, mas me sinto sozinho por dentro.",
+      "data": "2025-06-19T11:20:00.000Z",
+      "status": "pendente"
+    },
+    {
+      "id": "5",
+      "titulo": "Preocupação excessiva",
+      "texto": "Me preocupo com tudo, mesmo com coisas pequenas. Isso me deixa esgotado.",
+      "data": "2025-06-19T13:00:00.000Z",
+      "status": "pendente"
+    },
+    {
+      "id": "6",
+      "titulo": "Dificuldade para dormir",
+      "texto": "Tenho insônia quase toda noite, fico pensando em mil coisas.",
+      "data": "2025-06-19T14:45:00.000Z",
+      "status": "pendente"
+    },
+    {
+      "id": "7",
+      "titulo": "Falta de motivação",
+      "texto": "Acordo todos os dias sem vontade de fazer nada. Me sinto vazio.",
+      "data": "2025-06-19T16:10:00.000Z",
+      "status": "pendente"
+    },
+    {
+      "id": "996",
+      "titulo": "teste",
+      "texto": "teste",
+      "data": "2025-06-19",
+      "status": "pendente"
+    },
+    {
+      "id": "55",
+      "titulo": "Namoro",
+      "texto": "Terminei meu relacionamento, estou me sentindo muito vazio...",
+      "data": "2025-06-19",
+      "status": "respondido",
+      "resposta": "Só força irmão",
+      "dataResposta": "2025-06-19T18:53:12.732Z"
+    },
+    {
+      "id": "2138",
+      "titulo": "to mt mal teste",
+      "texto": "to mt mal teste",
+      "data": "2025-06-19",
+      "status": "respondido",
+      "resposta": "tem que se esforçar",
+      "dataResposta": "2025-06-19T19:18:17.861Z"
     }
   ],
-  "comunidades": [
+  "comentarios": [
     {
       "id": "1",
-      "idNome": "grupo-ansiedade",
-      "titulo": "Grupo de Ansiedade",
-      "descricao": "Compartilhe experiências e aprenda estratégias.",
-      "imagem": ""
+      "tipo": "mensagem",
+      "texto": "Tenho me sentido muito ansiosa ultimamente. Alguém já passou por isso?",
+      "data": "2025-06-19T07:00:00.000Z"
     },
     {
       "id": "2",
-      "idNome": "depressao",
-      "titulo": "Depressão e Recuperação",
-      "descricao": "Encontre apoio em sua jornada.",
-      "imagem": ""
+      "tipo": "resposta",
+      "texto": "Sim, já passei por isso. O que me ajudou foi fazer exercícios de respiração e procurar apoio profissional.",
+      "data": "2025-06-19T07:10:00.000Z",
+      "idMensagem": "1"
+    },
+    {
+      "id": "3",
+      "tipo": "mensagem",
+      "texto": "Não tem sido fácil..",
+      "data": "2025-06-19T14:22:50.000Z"
+    },
+    {
+      "id": "c798",
+      "tipo": "resposta",
+      "texto": "Vai dar tudo certo!",
+      "data": "2025-06-19T17:25:52.082Z",
+      "idMensagem": "3"
+    },
+    {
+      "id": "2f4f",
+      "tipo": "resposta",
+      "texto": "Sim, constantemente",
+      "data": "2025-06-19T18:16:06.145Z",
+      "idMensagem": "1"
+    },
+    {
+      "id": "8902",
+      "tipo": "mensagem",
+      "texto": "Estou com muita dificuldade na faculdade e me sinto péssimo mentalmente.",
+      "data": "2025-06-19T18:34:50.060Z"
+    },
+    {
+      "id": "086b",
+      "tipo": "resposta",
+      "texto": "Eu também já passei por isso, é normal",
+      "data": "2025-06-19T18:36:18.637Z",
+      "idMensagem": 8902
+    }
+  ],
+  "diario": [
+    {
+      "id": "1",
+      "data": "2025-06-18",
+      "titulo": "Dia difícil na faculdade",
+      "texto": "A prova de cálculo foi mais difícil do que eu esperava. Senti muita ansiedade durante o dia.",
+      "privado": "nao",
+      "profissional": "sim"
+    },
+    {
+      "id": "2",
+      "data": "2025-06-17",
+      "titulo": "Conquista pequena",
+      "texto": "Consegui acordar cedo e caminhar por 20 minutos. Fiquei orgulhosa de mim.",
+      "privado": "nao",
+      "profissional": "nao"
+    },
+    {
+      "id": "3",
+      "data": "2025-06-16",
+      "titulo": "Pensamentos negativos",
+      "texto": "Hoje me senti desmotivada, parecia que nada fazia sentido.",
+      "privado": "sim",
+      "profissional": "sim"
+    },
+    {
+      "id": "9d02",
+      "data": "2025-06-19",
+      "titulo": "teste",
+      "texto": "teste",
+      "privado": "nao",
+      "profissional": "sim"
+    },
+    {
+      "id": "4a72",
+      "data": "2025-06-19",
+      "titulo": "Namoro",
+      "texto": "Terminei meu relacionamento, estou me sentindo muito vazio...",
+      "privado": "nao",
+      "profissional": "sim"
+    },
+    {
+      "id": "3ccd",
+      "data": "2025-06-19",
+      "titulo": "to mt mal teste",
+      "texto": "to mt mal teste",
+      "privado": "nao",
+      "profissional": "sim"
     }
   ],
   "rotina": [
     {
-      "id": "9a0d",
-      "nome": "Estudar",
-      "icone": "📝",
-      "horario": "07:30",
-      "categoria": "Estudo"
-    },
-    {
-      "id": "ee17",
-      "nome": "Kauã Rodrigues",
-      "icone": "📝",
-      "horario": "08:09",
-      "categoria": "Estudo"
-    },
-    {
-      "id": "83bb",
-      "nome": "Ler",
-      "icone": "📝",
-      "horario": "12:30",
-      "categoria": "Leitura"
-    },
-    {
-      "id": "74b8",
-      "nome": "academia",
-      "icone": "🏋🏻‍♂️",
-      "horario": "17:00",
-      "categoria": "pegar peso"
-    },
-    {
-      "id": "188b",
-      "nome": "Kauã Rodrigues",
-      "icone": "📝",
-      "horario": "08:07",
-      "categoria": "pegar peso"
-    },
-    {
-      "id": "5c35",
-      "nome": "academia",
-      "icone": "🏋🏻‍♂️",
-      "horario": "05:06",
-      "categoria": "pegar peso"
-    },
-    {
-      "id": "2c90",
-      "nome": "teste",
-      "icone": "teste",
-      "horario": "05:06",
-      "categoria": "teste"
-    },
-    {
-      "id": "fb68",
-      "nome": "faculdade",
-      "icone": "📚",
-      "horario": "08:50",
-      "categoria": "Estudo"
-    }
-  ],
-  "profissionais": [
-    {
       "id": "1",
-      "idNome": "psicologo-online",
-      "titulo": "Psicólogos Online",
-      "descricao": "Consultas por videoconferência.",
-      "imagem": ""
+      "nome": "Exercícios matinais",
+      "horario": "06:30",
+      "categoria": "Exercício"
     },
     {
       "id": "2",
-      "idNome": "terapia-grupo",
-      "titulo": "Terapia em Grupo",
-      "descricao": "Sessões terapêuticas em grupo.",
-      "imagem": ""
-    }
-  ],
-  "registros": [
-    {
-      "id": "1",
-      "data": "2024-06-10",
-      "titulo": "Preciso de ajuda profissional",
-      "conteudo": "Estou me sentindo muito ansioso ultimamente e não sei o que fazer. Gostaria de uma orientação.",
-      "privado": false,
-      "dataResposta": "",
-      "resposta": "",
-      "profissional": true
+      "nome": "Estudar programação",
+      "horario": "08:00",
+      "categoria": "Estudo"
     },
     {
-      "id": "2",
-      "data": "2024-06-09",
-      "titulo": "Desabafo respondido (exemplo)",
-      "conteudo": "Tive um dia difícil, mas consegui lidar com os problemas. Gostaria de uma reflexão.",
-      "dataResposta": "",
-      "resposta": "",
-      "privado": false,
-      "profissional": true
+      "id": "4",
+      "nome": "Terapia",
+      "horario": "15:00",
+      "categoria": "Saúde"
     },
     {
-      "id": "3",
-      "data": "2024-06-08",
-      "titulo": "Diário pessoal",
-      "conteudo": "Hoje o dia foi bom, fiz caminhada e me senti bem.",
-      "dataResposta": "",
-      "resposta": "",
-      "privado": false,
-      "profissional": false
-    }
-  ],
-  "respostas": [
-    {
-      "id": "1",
-      "registroId": 2,
-      "dataResposta": "2024-06-9",
-      "texto": "Parabéns por conseguir superar os desafios do dia! É importante reconhecer essas pequenas vitórias. Continue assim!"
-    },
-    {
-      "id": "fb54",
-      "registroId": 1,
-      "dataResposta": "2025-06-11",
-      "texto": "ok"
+      "id": "89c0",
+      "nome": "Aula de Diw",
+      "horario": "07:20",
+      "categoria": "Estudo"
     }
   ]
 }
