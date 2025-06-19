@@ -17,7 +17,7 @@ class RotinasApp {
     document.getElementById("form-rotina").onsubmit = (e) =>
       this.salvarRotina(e);
     document.getElementById("btn-back").onclick = () => {
-      window.location.href = "/public/modulos/home/home.html";
+      window.location.href = "../../modulos/home/home.html";
     };
 
     document.addEventListener("keydown", (e) => {
@@ -109,9 +109,10 @@ class RotinasApp {
     };
 
     try {
-      const url = this.editandoId
-        ? ${this.apiUrl}/${this.editandoId}
-        : this.apiUrl;
+     const url = this.editandoId
+  ? `${this.apiUrl}/${this.editandoId}`
+  : this.apiUrl;
+
       const method = this.editandoId ? "PUT" : "POST";
 
       const response = await fetch(url, {
@@ -131,7 +132,8 @@ class RotinasApp {
 
   async editarRotina(id) {
     try {
-      const response = await fetch(${this.apiUrl}/${id});
+   const response = await fetch(`${this.apiUrl}/${id}`);
+
       const rotina = await response.json();
       this.abrirModal(rotina);
     } catch (error) {
@@ -143,9 +145,10 @@ class RotinasApp {
     if (!confirm("Deseja realmente excluir esta rotina?")) return;
 
     try {
-      const response = await fetch(${this.apiUrl}/${id}, {
-        method: "DELETE",
-      });
+     const response = await fetch(`${this.apiUrl}/${id}`, {
+  method: "DELETE",
+});
+
       if (!response.ok) throw new Error("Erro ao excluir");
       this.carregarRotinas();
     } catch (error) {

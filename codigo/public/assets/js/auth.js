@@ -58,9 +58,12 @@ if (formElement) {
 
           setTimeout(() => {
             if (existingUser.tipo === "especialista") {
-              window.location.href = "/public/modulos/diario/desabafos.html";
+              window.location.href = "modulos/diario/desabafos.html";
             } else {
-              window.location.href = "/public/modulos/home/home.html";
+window.location.href = "modulos/home/home.html";
+
+
+
             }
           }, 1500);
         } else {
@@ -128,7 +131,7 @@ if (formElement) {
         );
 
         setTimeout(() => {
-          window.location.href = "../../../index.html";
+          window.location.href = "../../index.html";
         }, 1500);
 
         this.setLoading(submitBtn, false, "Criar conta");
@@ -180,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
       localStorage.removeItem("loggedUser");
-      window.location.href = "../../../index.html";
+   window.location.href = "../../index.html";
     });
   }
 });

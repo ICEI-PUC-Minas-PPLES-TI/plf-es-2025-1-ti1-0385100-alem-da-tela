@@ -26,7 +26,8 @@ class ComunidadeApp {
       this.sendReply(e);
     document.getElementById("btn-cancelar").onclick = () => this.hideReply();
     document.getElementById("btn-back").onclick = () => {
-      window.location.href = "/public/modulos/home/home.html";
+  window.location.href = "../../modulos/home/home.html";
+
     };
   }
 

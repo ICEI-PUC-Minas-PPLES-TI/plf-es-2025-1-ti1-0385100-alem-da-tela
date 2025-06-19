@@ -125,6 +125,12 @@
       "texto": "Eu também já passei por isso, é normal",
       "data": "2025-06-19T18:36:18.637Z",
       "idMensagem": 8902
+    },
+    {
+      "id": "b35d",
+      "tipo": "mensagem",
+      "texto": "teste",
+      "data": "2025-06-19T20:55:06.111Z"
     }
   ],
   "diario": [
@@ -200,6 +206,12 @@
       "id": "89c0",
       "nome": "Aula de Diw",
       "horario": "07:20",
+      "categoria": "Estudo"
+    },
+    {
+      "id": "4397",
+      "nome": "Rotina teste",
+      "horario": "20:02",
       "categoria": "Estudo"
     }
   ]
