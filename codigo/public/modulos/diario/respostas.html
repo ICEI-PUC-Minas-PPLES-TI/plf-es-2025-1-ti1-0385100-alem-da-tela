@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respostas dos Especialistas - Além da Tela</title>
+    <link rel="stylesheet" href="../../assets/css/diario.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Além da Tela</div>
+      <button
+        onclick="window.location.href = '../home/home.html'"
+        class="btn-back"
+      >
+        Voltar
+      </button>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Respostas dos Especialistas</h1>
+        <p>Veja as respostas dos profissionais aos seus desabafos enviados.</p>
+      </section>
+
+      <section class="content-section">
+        <div id="respostas-container" class="content-card">
+          <div class="loading">Carregando respostas...</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Em caso de emergência, ligue 188 (CVV) ou procure ajuda médica imediata.
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const container = document.getElementById("respostas-container");
+
+        try {
+          const response = await fetch("http://localhost:3000/desabafos");
+          const data = await response.json();
+
+          const respondidos = data.filter((d) => d.status === "respondido");
+
+          if (!respondidos.length) {
+            container.innerHTML =
+              '<div class="empty-state">Nenhuma resposta disponível ainda.</div>';
+            return;
+          }
+
+          container.innerHTML = respondidos
+            .map((d) => {
+              const data = new Date(d.data).toLocaleString("pt-BR");
+              const dataResposta = new Date(d.dataResposta).toLocaleString(
+                "pt-BR"
+              );
+
+              return `
+                <div class="registro-item" style="border: 1px solid rgba(0,0,0,0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                  <div class="registro-titulo">${d.titulo}</div>
+                  <div class="registro-data">Enviado em: ${data}</div>
+                  <div class="registro-preview" style="margin: 1rem 0;">
+                    ${d.texto}
+                  </div>
+                  <div class="desabafo-resposta" style="background: rgba(125, 207, 182, 0.05); padding: 1rem; border-left: 4px solid var(--primary); border-radius: 0.5rem;">
+                    <strong>Resposta do especialista:</strong>
+                    <p style="margin: 0.5rem 0;">${d.resposta}</p>
+                    <small style="color: var(--text-light);">Respondido em: ${dataResposta}</small>
+                  </div>
+                </div>
+              `;
+            })
+            .join("");
+        } catch (error) {
+          container.innerHTML =
+            '<div class="error">Erro ao carregar as respostas.</div>';
+        }
+      });
+    </script>
+  </body>
+</html>
