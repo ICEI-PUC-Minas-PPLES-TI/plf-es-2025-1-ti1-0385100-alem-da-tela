@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Além da Tela - Cuidando da sua Saúde Mental</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Além da Tela</div>
+        <ul class="nav-links">
+          <li><a href="../comunidade/comunidade.html">Comunidade</a></li>
+          <li><a href="../rotina/rotina.html">Rotina</a></li>
+          <li><a href="../diario/diario.html">Meu diário</a></li>
+          <li><a href="../diario/desabafos.html">Seção do Especialista</a></li>
+          <li><button id="btn-logout">Sair</button></li>
+        </ul>
+        <button class="menu-toggle">☰</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <h1 id="welcome-message">Boas vindas!</h1>
+
+        <p>
+          Este é o seu espaço seguro. Aqui, você pode se sentir acolhido,
+          encontrar recursos valiosos e se conectar com uma comunidade que
+          realmente se importa com você.
+        </p>
+
+        <button class="cta-button" onclick="openModal()">Buscar Ajuda</button>
+      </section>
+
+      <section id="recursos" class="cards">
+        <div class="card" onclick="showContent('recursos')">
+          <h3>Recursos de Autocuidado</h3>
+          <p>
+            Guias práticos e ferramentas para cuidar da sua saúde mental no dia
+            a dia.
+          </p>
+        </div>
+
+        <div class="card" onclick="showContent('comunidade')">
+          <h3>Comunidade de Apoio</h3>
+          <p>Conecte-se com pessoas que compartilham experiências similares.</p>
+        </div>
+
+        <div class="card" onclick="showContent('profissional')">
+          <h3>Ajuda Profissional</h3>
+          <p>Encontre orientação com profissionais qualificados.</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div id="recursos-content" class="content-area hidden">
+          <h2>Recursos de Autocuidado</h2>
+          <div class="resource-grid">
+            <div class="resource-card">
+              <h4>Meditação Guiada</h4>
+              <p>Técnicas simples para relaxamento e foco.</p>
+            </div>
+            <div class="resource-card">
+              <h4>Exercícios de Respiração</h4>
+              <p>Práticas para reduzir ansiedade e estresse.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="comunidade-content" class="content-area hidden">
+          <h2>Comunidade de Apoio</h2>
+          <div class="group-list">
+            <div class="group-card">
+              <h4>Grupo de Ansiedade</h4>
+              <p>Compartilhe experiências e estratégias de enfrentamento.</p>
+            </div>
+            <div class="group-card">
+              <h4>Depressão e Recuperação</h4>
+              <p>Apoio em sua jornada de recuperação.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="profissional-content" class="content-area hidden">
+          <h2>Ajuda Profissional</h2>
+          <div class="professional-grid">
+            <div class="professional-card">
+              <h4>Psicólogos Online</h4>
+              <p>Consultas seguras por videoconferência.</p>
+            </div>
+            <div class="professional-card">
+              <h4>Terapia em Grupo</h4>
+              <p>Sessões com acompanhamento profissional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <h2>Precisa de Ajuda?</h2>
+        <div class="emergency-contacts">
+          <div class="contact-item">
+            <h4>CVV - Centro de Valorização da Vida</h4>
+            <p><strong>Ligue 188</strong> (24 horas, gratuito)</p>
+          </div>
+          <div class="contact-item">
+            <h4>SAMU - Emergências Médicas</h4>
+            <p><strong>Ligue 192</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/auth.js"></script>
+  </body>
+</html>
