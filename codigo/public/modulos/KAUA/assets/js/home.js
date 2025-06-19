@@ -1,14 +1,3 @@
-// Função genérica para criar um card HTML com os dados
-function criarCard(item) {
-  return `
-    <article class="resource-card">
-      <h3>${item.titulo}</h3>
-      <p>${item.descricao}</p>
-      ${item.imagem ? `<img src="${item.imagem}" alt="${item.titulo}" />` : ''}
-      <a href="${item.link || '#'}" class="resource-link">${item.acao || 'Começar Agora'}</a>
-    </article>
-  `;
-}
 
 // Função para carregar recursos
 async function carregarRecursos() {
@@ -16,7 +5,7 @@ async function carregarRecursos() {
     const resposta = await fetch('http://localhost:3000/recursos');
     const recursos = await resposta.json();
 
-    const container = document.getElementById('resource-container');
+    const container = document.getElementById('resource-link');
     container.innerHTML = '';
 
     recursos.forEach(recurso => {
@@ -29,7 +18,7 @@ document.getElementById('recursos-content').classList.remove('hidden');
     console.error('Erro ao carregar recursos:', error);
   }
 }
-
+ 
 // Função para carregar comunidades
 async function carregarComunidades() {
   try {
@@ -68,9 +57,39 @@ async function carregarProfissionais() {
   }
 }
 
+// Função para carregar rotinas
+async function carregarRotinas() {
+  try {
+    const resposta = await fetch('http://localhost:3000/rotinas');
+    let rotinas = await resposta.json();
+
+    // Ordenar por horário crescente
+    rotinas.sort((a, b) => a.horario.localeCompare(b.horario));
+
+    const container = document.getElementById('rotina-container');
+    container.innerHTML = '';
+
+    rotinas.forEach(item => {
+      container.innerHTML += `
+        <article class="rotina-card">
+          <div><strong>${item.horario}</strong></div>
+          <div>${item.icone || ''} ${item.nome}</div>
+          <div><small>(${item.categoria})</small></div>
+        </article>
+      `;
+    });
+
+    document.getElementById('rotina-content').classList.remove('hidden');
+  } catch (error) {
+    console.error('Erro ao carregar rotinas:', error);
+  }
+}
+
+
 // Quando a página carregar, chama as funções para carregar todas as seções
 window.addEventListener('DOMContentLoaded', () => {
   carregarRecursos();
   carregarComunidades();
   carregarProfissionais();
+  carregarRotinas(); //rotinas adicionada para rodas automaticamente com os outros cards 
 });
