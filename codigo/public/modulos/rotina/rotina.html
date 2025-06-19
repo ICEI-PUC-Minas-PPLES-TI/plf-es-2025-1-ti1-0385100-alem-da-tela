@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minhas Rotinas - Além da Tela</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/rotina.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Minhas Rotinas</h1>
+      <button id="btn-nova" class="btn-primary">Nova Rotina</button>
+      <button id="btn-back" class="btn-back">Início</button>
+    </header>
+
+    <main>
+      <section id="rotinas-lista" class="rotinas-grid">
+        <div class="loading">Carregando rotinas...</div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Nova Rotina</h2>
+          <button id="btn-fechar" class="btn-close">&times;</button>
+        </div>
+
+        <form id="form-rotina">
+          <div class="form-group">
+            <label for="nome">Nome da Rotina</label>
+            <input
+              type="text"
+              id="nome"
+              placeholder="Ex: Exercícios matinais"
+              required
+              maxlength="50"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="horario">Horário</label>
+            <input type="time" id="horario" required />
+          </div>
+
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" required>
+              <option value="">Selecione uma categoria</option>
+              <option value="Saúde">Saúde</option>
+              <option value="Exercício">Exercício</option>
+              <option value="Trabalho">Trabalho</option>
+              <option value="Estudo">Estudo</option>
+              <option value="Lazer">Lazer</option>
+              <option value="Casa">Casa</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="btn-cancelar" class="btn-secondary">
+              Cancelar
+            </button>
+            <button type="submit" class="btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../assets/js/rotina.js"></script>
+  </body>
+</html>
