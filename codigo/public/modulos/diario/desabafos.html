@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Especialista - Além da Tela</title>
+    <link rel="stylesheet" href="../../assets/css/desabafos.css" />
+  </head>
+  <body>
+    <script>
+      const user = JSON.parse(localStorage.getItem("loggedUser"));
+
+      if (!user || user.tipo !== "especialista") {
+        alert("Acesso restrito. Redirecionando...");
+        window.location.href = "/public/modulos/home/home.html";
+      }
+    </script>
+
+    <header>
+      <div class="logo">
+        <span class="heart">♥</span>
+        <span>Além da Tela</span>
+      </div>
+      <nav>
+        <button id="btn-pendentes" class="nav-btn active">Pendentes</button>
+        <button id="btn-respondidos" class="nav-btn">Respondidos</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Área do Especialista</h1>
+        <p>Gerencie e responda aos desabafos enviados pelos usuários.</p>
+      </section>
+
+      <section id="secao-pendentes" class="content-section">
+        <div class="section-header">
+          <h2>Desabafos Pendentes</h2>
+          <button
+            id="btn-atualizar-pendentes"
+            class="btn-icon"
+            title="Atualizar"
+          >
+            🔄
+          </button>
+        </div>
+        <div id="lista-desabafos-pendentes" class="desabafos-container">
+          <div class="loading">Carregando desabafos pendentes...</div>
+        </div>
+      </section>
+
+      <section id="secao-respondidos" class="content-section hidden">
+        <div class="section-header">
+          <h2>Desabafos Respondidos</h2>
+          <button
+            id="btn-atualizar-respondidos"
+            class="btn-icon"
+            title="Atualizar"
+          >
+            🔄
+          </button>
+        </div>
+        <div id="lista-desabafos-respondidos" class="desabafos-container">
+          <div class="loading">Carregando desabafos respondidos...</div>
+        </div>
+      </section>
+
+      <div id="modal-resposta" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Responder Desabafo</h3>
+            <button id="btn-fechar-modal" class="btn-close">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <div id="desabafo-original" class="desabafo-original"></div>
+
+            <form id="form-resposta">
+              <div class="form-group">
+                <label for="resposta-texto">Sua resposta profissional:</label>
+                <textarea
+                  id="resposta-texto"
+                  placeholder="Escreva sua resposta aqui..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button
+                  type="button"
+                  id="btn-cancelar-resposta"
+                  class="btn-secondary"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" class="btn-primary">
+                  Enviar Resposta
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Além da Tela. Todos os direitos reservados.</p>
+      <p>
+        Em caso de emergência, ligue 188 (CVV) ou procure ajuda médica imediata
+      </p>
+    </footer>
+
+    <script src="../../assets/js/desabafos.js"></script>
+  </body>
+</html>
