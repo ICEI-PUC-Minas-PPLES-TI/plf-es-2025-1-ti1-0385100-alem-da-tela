@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidade - Além da Tela</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/comunidade.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Além da Tela</div>
+      <nav>
+        <button id="btn-nova" class="btn-nav active">Nova Mensagem</button>
+        <button id="btn-todas" class="btn-nav">Ver Todas</button>
+        <button id="btn-back" class="btn-back">Início</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Vamos conversar?</h1>
+        <p>
+          Compartilhe suas experiências e conecte-se com nossa comunidade de
+          apoio.
+        </p>
+      </section>
+
+      <section id="nova-mensagem" class="card">
+        <h2>Compartilhe sua mensagem</h2>
+        <form id="form-mensagem">
+          <textarea
+            id="texto-mensagem"
+            placeholder="Escreva sua mensagem aqui..."
+            required
+          ></textarea>
+          <button type="submit" class="btn-primary">Enviar Mensagem</button>
+        </form>
+      </section>
+
+      <section id="form-resposta" class="card hidden">
+        <h2>Deixe uma resposta</h2>
+        <form id="resposta-form">
+          <textarea
+            id="texto-resposta"
+            placeholder="Escreva sua resposta..."
+            required
+          ></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Enviar Resposta</button>
+            <button type="button" id="btn-cancelar" class="btn-secondary">
+              Cancelar
+            </button>
+          </div>
+        </form>
+        <div id="lista-respostas"></div>
+      </section>
+
+      <section id="todas-mensagens" class="card hidden">
+        <div class="section-header">
+          <h2>Todas as Mensagens</h2>
+          <button id="btn-atualizar" class="btn-refresh">Atualizar</button>
+        </div>
+        <div id="lista-comentarios">
+          <div class="loading">Carregando mensagens...</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../assets/js/comunidade.js"></script>
+  </body>
+</html>
