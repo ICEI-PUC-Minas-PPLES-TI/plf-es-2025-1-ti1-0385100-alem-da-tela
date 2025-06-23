@@ -34,10 +34,19 @@ header {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-weight: bold;
+  color: #3a7f74;
 }
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
 
 nav {
   display: flex;

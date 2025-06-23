@@ -23,7 +23,9 @@
       "titulo": "Ansiedade constante",
       "texto": "Tenho sentido meu coração acelerar sem motivo, principalmente à noite.",
       "data": "2025-06-19T10:15:00.000Z",
-      "status": "pendente"
+      "status": "respondido",
+      "resposta": "posso fazer nada",
+      "dataResposta": "2025-06-21T18:35:16.728Z"
     },
     {
       "id": "4",
@@ -131,6 +133,12 @@
       "tipo": "mensagem",
       "texto": "teste",
       "data": "2025-06-19T20:55:06.111Z"
+    },
+    {
+      "id": "66cb",
+      "tipo": "mensagem",
+      "texto": "oi, me chamo kaua",
+      "data": "2025-06-23T14:25:16.852Z"
     }
   ],
   "diario": [
