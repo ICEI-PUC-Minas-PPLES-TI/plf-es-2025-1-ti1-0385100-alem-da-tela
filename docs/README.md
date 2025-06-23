@@ -7,7 +7,7 @@ Informações básicas do projeto.
 * **Membros da equipe:**
 
   * [Miguel Teixeira ](https://github.com/texascountry) 
-  * [Pedro Medina]()
+  * [Pedro Medina](https://github.com/PedroSonico777)
   * [Kaua Rodrigues](https://github.com/Kaua-Rodriguess)
   * 
 A documentação do projeto é estruturada da seguinte forma:
@@ -66,7 +66,8 @@ O site será acessível, intuitivo e não exigirá conhecimentos técnicos, ofer
 
 ## Etapa de Entendimento
 
-![Texto alternativo](images/Highlight%20e%20Pesquisa.png)
+![Texto alternativo]()![Highlight e Pesquisa](https://github.com/user-attachments/assets/30991b97-d57b-430c-80ec-364c8c2f3d38)
+
 ![Texto alternativo](images/Mapa%20e%20CSD.png)
 
 ## Etapa de Definição
