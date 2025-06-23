@@ -28,17 +28,70 @@ body {
   padding: 1rem;
 }
 
+.wrapper{
+  display:flex;
+  width:90%;
+  max-width: 1100px;
+  height: 600px;
+  border-radius: 1.5rem;
+  overflow:hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  background:white;
+}
+
 .container {
-  width: 100%;
-  max-width: 400px;
+  height: 100vh;/* ve se depois da alguma diferença, se não tira*/
+  display: flex;
+  
+}
+
+.left-section{
+  flex:1;
+  background: linear-gradient(135deg,#ff00cc,#3333ff);
+  color:white;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.left-section .highlight{
+  font-weight: bold;
+  color: black;
+}
+
+.left-section p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.logo-img{
+  width: 100px;
+  margin-bottom: 2rem;
+}
+
+.right-section{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background-color:#fff;
 }
 
 .auth-card {
-  background-color: var(--card-bg);
+  background-color: var(--card-bg,#ffffff);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg, 0 4px 20px rgba(0,0,0,0.1));
   border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
 }
 
 
@@ -224,5 +277,20 @@ body {
 
   .logo {
     font-size: 1.3rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    flex: unset;
+    width: 100%;
+    height: auto;
+  }
+
+  .left-section {
+    align-items: center;
+    text-align: center;
   }
 }

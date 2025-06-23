@@ -221,6 +221,12 @@
       "nome": "Rotina teste",
       "horario": "20:02",
       "categoria": "Estudo"
+    },
+    {
+      "id": "a454",
+      "nome": "academia",
+      "horario": "05:00",
+      "categoria": "Exercício"
     }
   ]
 }

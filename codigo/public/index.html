@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Login e cadastro - Além da Tela" />
@@ -8,8 +9,19 @@
     <link rel="stylesheet" href="./assets/css/auth.css" />
   </head>
   <body>
+     
     <div class="container">
-      <div class="auth-card">
+     <div class="wrapper">
+<!--Coluna de imagem/logo/texto-->
+       <div class="left-section">
+        <img src="../../assets/images/logo.png" alt="Logo" class="logo-img">
+        <h1>O <span class="highlight">futuro</span> da Psicologia<br> começa aqui.</h1>
+        <p>Primeiro software desenvolvido 100% para psicólogos.</p>
+       </div>
+    
+       <!--Coluna do formulário de login-->
+       <div class="right-section">
+        <div class="auth-card">
         <form id="auth-form" class="auth-form">
           <h2>Entrar na sua conta</h2>
 
@@ -51,7 +63,10 @@
         </form>
       </div>
     </div>
-
+       </div>
+     </div> 
+      
+      
     <script src="./assets/js/auth.js"></script>
   </body>
 </html>
