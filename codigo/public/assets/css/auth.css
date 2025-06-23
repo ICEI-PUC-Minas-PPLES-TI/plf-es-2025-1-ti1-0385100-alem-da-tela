@@ -28,7 +28,7 @@ body {
   padding: 1rem;
 }
 
-.wrapper{
+.wrapper{ /*junta a left-section e a right-section*/
   display:flex;
   width:90%;
   max-width: 1100px;
@@ -37,17 +37,22 @@ body {
   overflow:hidden;
   box-shadow: 0 4px 30px rgba(0,0,0,0.1);
   background:white;
+  border-radius:1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+
 }
 
 .container {
-  height: 100vh;/* ve se depois da alguma diferença, se não tira*/
+  height: 100vh;
   display: flex;
-  
+  justify-content:center;
+  align-items:center;
+  background:linear-gradiante(to top lef,#eee,#e0cfff);    
 }
 
 .left-section{
   flex:1;
-  background: linear-gradient(135deg,#ff00cc,#3333ff);
+  background: linear-gradient(135deg,#eee, #1eb88a);
   color:white;
   display:flex;
   flex-direction: column;
@@ -63,7 +68,7 @@ body {
 
 .left-section .highlight{
   font-weight: bold;
-  color: black;
+  color: rgb(19, 100, 69);
 }
 
 .left-section p {
@@ -88,10 +93,12 @@ body {
   background-color: var(--card-bg,#ffffff);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: var(--shadow-lg, 0 4px 20px rgba(0,0,0,0.1));
-  border: 1px solid rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 400px;
+}
+
+.auth-card button{
+  font-weight: 600;
 }
 
 
