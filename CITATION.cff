@@ -1,31 +1,32 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Álem da Tela
 authors:
+  - family-names: Rodrigues
+    given-names: kauã
+  - family-names: Henrique Medina dos Passos
+    given-names: Pedro 
+  - family-names: Teixeira Bicalho
+    given-names: Miguel 
   - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
+  - name-suffix: Professor  
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
+    family-names: Veira Carneiro
+    given-names: Rommel
+  - name-suffix: Professor 
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names:  Silva Tavares
+    given-names: Cleiton
 keywords:
-  - 
-  - 
+- saúde mental
+- redes sociais
+- rotina
+- organização
+- psicologia
+- jovens
+- autocuidado
+
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2025-06-23
