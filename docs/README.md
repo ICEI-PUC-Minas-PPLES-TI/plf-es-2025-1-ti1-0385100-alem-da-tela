@@ -6,13 +6,11 @@ Informações básicas do projeto.
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-alem-da-tela.git
 * **Membros da equipe:**
 
-  * [Henrique Araujo](https://github.com/redx006) 
   * [Miguel Teixeira ](https://github.com/texascountry) 
-  * [Arthur Vital](https://github.com/arthurrvital)
   * [Pedro Medina]()
-  * [Kaua Rodrigues](https://github.com/002002002) 
+  * [Kaua Rodrigues](https://github.com/Kaua-Rodriguess)
+  * 
 A documentação do projeto é estruturada da seguinte forma:
-
 1. Introdução
 2. Contexto
 3. Product Discovery
