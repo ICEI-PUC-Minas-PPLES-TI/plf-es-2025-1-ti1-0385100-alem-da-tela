@@ -66,8 +66,7 @@ O site será acessível, intuitivo e não exigirá conhecimentos técnicos, ofer
 
 ## Etapa de Entendimento
 
-![Texto alternativo]()![Highlight e Pesquisa](https://github.com/user-attachments/assets/30991b97-d57b-430c-80ec-364c8c2f3d38)
-
+![Texto alternativo](images/Highlight e Pesquisa)
 ![Texto alternativo](images/Mapa%20e%20CSD.png)
 
 ## Etapa de Definição
