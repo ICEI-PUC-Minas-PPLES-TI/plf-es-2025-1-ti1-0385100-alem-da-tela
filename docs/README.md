@@ -206,71 +206,134 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Desabafos
+Apresentação:
+psicologo irá ver os desbafos do seus pacientes e irá responde-los com uma abordagem psicologica e empática
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
-
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
-* **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+* **Estrutura de dados:** [desabafos](#####Estrutura-de-Dados---Desabafos)
+* **Instruções de acesso:** 
+  * Clicando responder irá abrir uma caixa de resposta, onde ele vai deixar sua resposta
+  * No canto superior direito tem um botão que o direcina para ver os desabafos respondidos do seus pacientes 
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/area-especialista-respondidas.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+##### Funcionalidade 2 - rotina
+Apresentação:
+usuário vai poder organizar seus horários e compromissos 
 
-## Estruturas de Dados
+* **Estrutura de dados:** [rotina](#####-Estrutura-de-Dados---rotina)
+* **Instruções de acesso:** 
+  * clicando em nova rotina voce adiciona o horario e a categoria
+  * clique em salvar e será adicionado na aba "rotina"
+* **Tela da funcionalidade**:
 
-Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
+![Tela de Funcionalidade](images/rotina.png)
+![Tela de Funcionalidade](images/novarotina.png)
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
+#### Funcionalidade 3 - diario
+Apresentação:
+espaço para se abrir e colocar seus pensamentos
 
-Contatos da aplicação
+* **Estrutura de dados:** [rodiariotina](#####-Estrutura-de-Dados---diario)
+* **Instruções de acesso:** 
+  * clicando em novo registro voce adicionada o que vc quer escrever
+  * ha a possibilidade de "marcar como privado" e "enviar para profissional", para voce quardar apenas para voce ou receber a resposta de um psicológo
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/diario.png)
+
+#### Funcionalidade 4 - comunidade
+Apresentação:
+usuário vai poder expressar pensamentos e outras pessoas poderam responde-lo
+
+* **Estrutura de dados:** [comunidade](#####-Estrutura-de-Dados---comunidade)
+* **Instruções de acesso:** 
+  * clicando em enviar menssagem vc posta seus pensamenttos
+  
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/comunidade.png)
+
+#### Funcionalidade 5 - resposta do profissional
+Apresentação:
+usuário vai poder organizar seus horários e compromissos 
+
+* **Estrutura de dados:** [resposta do profissional](#####-Estrutura-de-Dados---rotina)
+* **Instruções de acesso:** 
+  * clicando em nova rotina voce adiciona o horario e a categoria
+  * clique em salvar e será adicionado na aba "rotina"
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/resposta-profissional.png)
+
+#### Funcionalidade 6 - desabafos respondidos pelos psicologos
+Apresentação:
+espaço para o psicologo vizualizar as respsotas que ele deu para seus pacientes
+
+* **Estrutura de dados:** [desabafos respondidos pelos psicologos](#####-Estrutura-de-Dados---desabafos)
+* **Instruções de acesso:** 
+  * ao clicar sobre a resposta dada ele poderá alterá-la
+* **Tela da funcionalidade**:
+
+##### Estrutura-de-Dados---Desabafos
+
+Desabafos da aplicação
 
 ```json
   {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
+    "id": "1",
+      "titulo": "Me sinto sobrecarregado",
+      "texto": "Tenho me sentido muito cansado e sem apoio. Não sei o que fazer.",
+      "data": "2025-06-19T08:30:00.000Z",
+      "status": "respondido",
+      "resposta": "Vamos marcar uma terapia?",
+      "dataResposta": "2025-06-19T17:37:15.639Z"
   }
   
 ```
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - comentarios  
 
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+comentários escritos
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+    "id": "1",
+      "tipo": "mensagem",
+      "texto": "Tenho me sentido muito ansiosa ultimamente. Alguém já passou por isso?",
+      "data": "2025-06-19T07:00:00.000Z"
   }
 ```
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de Dados - diario  
+
+diario
+
+```json
+  {
+     "id": "1",
+      "data": "2025-06-18",
+      "titulo": "Dia difícil na faculdade",
+      "texto": "A prova de cálculo foi mais difícil do que eu esperava. Senti muita ansiedade durante o dia.",
+      "privado": "nao",
+      "profissional": "sim"
+  }
+```
+
+##### Estrutura de Dados - rotina  
+
+organização de rotinas
+
+```json
+  {
+      "id": "1",
+      "nome": "Exercícios matinais",
+      "horario": "06:30",
+      "categoria": "Exercício"
+  }
+```
+
 
 ## Módulos e APIs
 
