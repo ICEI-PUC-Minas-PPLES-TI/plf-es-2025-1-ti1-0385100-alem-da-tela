@@ -161,12 +161,10 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIKrp4nQ=/?share_link_id=133369648021         |
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-alem-da-tela.git  |
 | Hospedagem do site          | replit     | https://replit.com/@kauarodriges17/Alem-da-Tela?v=1 |
-| Protótipo Interativo       | Além da Tela  | https://www.figma.com/proto/BbRZfQbXX9unxUEu8yartS/Figma-basics?node-id=601-39&t=ajrdrIyBLOeTLHrf-1  |
-|                             |            |                                                    |
+| Protótipo Interativo       | figma  | https://www.figma.com/proto/BbRZfQbXX9unxUEu8yartS/Figma-basics?node-id=601-39&t=ajrdrIyBLOeTLHrf-1  |
+| Editor de código           |  vs code    |           https://code.visualstudio.com/                                         |
+| Comunicação      |       google meet |   https://meet.google.com/                                                |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
 
 ## Gerenciamento do Projeto
 
@@ -206,7 +204,7 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 ## Funcionalidades
 
-Esta seção apresenta as funcionalidades da solução.Info
+Esta seção apresenta as funcionalidades da solução
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
