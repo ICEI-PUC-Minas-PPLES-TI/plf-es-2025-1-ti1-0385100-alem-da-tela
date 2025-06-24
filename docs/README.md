@@ -160,7 +160,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIKrp4nQ=/?share_link_id=133369648021         |
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-alem-da-tela.git  |
-| Hospedagem do site          | replit     | colocar o link do site aqui |
+| Hospedagem do site          | replit     | https://replit.com/@kauarodriges17/Alem-da-Tela?v=1 |
 | Protótipo Interativo       | Além da Tela  | https://www.figma.com/proto/BbRZfQbXX9unxUEu8yartS/Figma-basics?node-id=601-39&t=ajrdrIyBLOeTLHrf-1  |
 |                             |            |                                                    |
 
@@ -172,7 +172,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
-![Exemplo de Kanban](images/exemplo-kanban.png)
+![Exemplo de Kanban](images/KANBAN.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
