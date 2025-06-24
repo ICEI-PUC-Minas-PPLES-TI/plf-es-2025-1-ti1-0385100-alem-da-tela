@@ -158,10 +158,10 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
+| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIKrp4nQ=/?share_link_id=133369648021         |
+| Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-alem-da-tela.git  |
+| Hospedagem do site          | replit     | colocar o link do site aqui |
+| Protótipo Interativo       | Além da Tela  | https://www.figma.com/proto/BbRZfQbXX9unxUEu8yartS/Figma-basics?node-id=601-39&t=ajrdrIyBLOeTLHrf-1  |
 |                             |            |                                                    |
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
