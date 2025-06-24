@@ -139,6 +139,12 @@
       "tipo": "mensagem",
       "texto": "oi, me chamo kaua",
       "data": "2025-06-23T14:25:16.852Z"
+    },
+    {
+      "id": "002b",
+      "tipo": "mensagem",
+      "texto": "testes",
+      "data": "2025-06-23T23:41:06.345Z"
     }
   ],
   "diario": [

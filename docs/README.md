@@ -66,7 +66,7 @@ O site será acessível, intuitivo e não exigirá conhecimentos técnicos, ofer
 
 ## Etapa de Entendimento
 
-![Texto alternativo](images/Highlight e Pesquisa)
+![Texto alternativo](/docs/images/Highlight%20e%20Pesquisa.png)
 ![Texto alternativo](images/Mapa%20e%20CSD.png)
 
 ## Etapa de Definição
@@ -123,7 +123,11 @@ Estes são os protótipos de telas do sistema.
 
 ### User Flow
 
-![Exemplo de wireframe](images/USERFLOW%20V2.png)
+![Exemplo de wireframe](../docs/images/userflow-login.png)
+![Exemplo de wireframe](docs/images/userflow-rotina.png)
+![Exemplo de wireframe](docs/images/userflow-especialista.png)
+![Exemplo de wireframe](docs/images/userflow-diario.png)
+![Exemplo de wireframe](docs/images/userflow-comunidade.png)
 
 ### Protótipo Interativo
 
