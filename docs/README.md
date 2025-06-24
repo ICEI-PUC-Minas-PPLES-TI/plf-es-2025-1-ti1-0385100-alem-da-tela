@@ -119,15 +119,30 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-![Exemplo de wireframe](images/WIREFRAME%201.png)
+### tela de login
+![Tela de login](images/login.png)
+### página principal
+![Tela principal](images/pagina-principal.png)
+### comunidade
+![comunidade](images/comunidade.png)
+### minhas respostas
+![minhas respostas](images/minhas-respostas.png)
+### rotina
+![](images/rotina.png)
+### nova rotina
+![rotina](images/novarotina.png)
+### diario
+![](images/diario.png)
+### area especialista
+![](images/area-especialista.png)
+### resposta do especialista
+![](images/area-especialista-respondidas.png)
+
 
 ### User Flow
 
-![Exemplo de wireframe](../docs/images/userflow-login.png)
-![Exemplo de wireframe](docs/images/userflow-rotina.png)
-![Exemplo de wireframe](docs/images/userflow-especialista.png)
-![Exemplo de wireframe](docs/images/userflow-diario.png)
-![Exemplo de wireframe](docs/images/userflow-comunidade.png)
+![Exemplo de wireframe](images/userflow.png)
+
 
 ### Protótipo Interativo
 
