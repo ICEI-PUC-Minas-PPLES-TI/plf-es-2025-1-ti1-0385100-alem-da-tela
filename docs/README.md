@@ -363,3 +363,5 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 # Referências
 
 As referências utilizadas no trabalho foram:
+
+https://sintropia.app
