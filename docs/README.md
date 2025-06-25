@@ -182,7 +182,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. 
 
-[![Vídeo do projeto](images/video.png)](pedro, coloca o link aqui dentro dessas aspas)
+[![Vídeo do projeto](images/video.png)](https://youtu.be/3XBjplJf66A)
 
 
 
