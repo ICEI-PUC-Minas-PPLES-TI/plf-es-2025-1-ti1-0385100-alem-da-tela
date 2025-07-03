@@ -10,7 +10,6 @@ Desenvolver uma aplicação voltada à saúde mental dos jovens surgiu da observ
 * Arthur Vital 
 * Henrique Araujo
 * Pedro Medina
-* Lorrainny
 
 ## Professores responsáveis
 
