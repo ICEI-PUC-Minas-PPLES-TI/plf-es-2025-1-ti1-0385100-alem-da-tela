@@ -1,32 +1,36 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: Álem da Tela
+title: Além da Tela
 authors:
-  - family-names: Rodrigues
-    given-names: kauã
-  - family-names: Henrique Medina dos Passos
-    given-names: Pedro 
+  - family-names: Rodrigues da Silva
+    given-names: Kauã
+  - family-names: Medina dos Passos
+    given-names: Pedro Henrique
   - family-names: Teixeira Bicalho
-    given-names: Miguel 
+    given-names: Miguel
+  - family-names: Vital
+    given-names: Arthur
+  - family-names: Araujo
+    given-names: Henrique
   - family-names: 
-  - name-suffix: Professor  
-    affiliation: PUC Minas
-    family-names: Veira Carneiro
+    given-names: Lorrainny
+  - family-names: Vieira Carneiro
     given-names: Rommel
-  - name-suffix: Professor 
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names:  Silva Tavares
+  - family-names: Silva Tavares
     given-names: Cleiton
+    name-suffix: Professor
+    affiliation: PUC Minas
 keywords:
-- saúde mental
-- redes sociais
-- rotina
-- organização
-- psicologia
-- jovens
-- autocuidado
-
-repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-alem-da-tela.git 
+  - saúde mental
+  - redes sociais
+  - rotina
+  - organização
+  - psicologia
+  - jovens
+  - autocuidado
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-alem-da-tela.git
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2025-06-23
